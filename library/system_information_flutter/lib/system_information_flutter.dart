@@ -1,0 +1,1 @@
+library system_information_flutter;
