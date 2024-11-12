@@ -50,7 +50,7 @@ class _MyAppState extends State<MyApp> {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: const Text('Mobile device identifier'),
+          title: const Text('System Information'),
         ),
         body: Center(
           child: Padding(

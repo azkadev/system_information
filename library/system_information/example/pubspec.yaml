@@ -11,8 +11,8 @@ dependencies:
   path: '^1.9.0'
   general_lib: '^0.0.46'
   general: '^0.0.30'
-  system_information:
-    path: ../
+  system_information: 
+    path: '../'
 dev_dependencies: 
   flutter_test: 
     sdk: 'flutter'

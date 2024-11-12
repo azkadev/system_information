@@ -32,10 +32,39 @@ Bukan maksud kami menipu itu karena harga yang sudah di kalkulasi + bantuan tiba
 
 
 <!-- END LICENSE --> */
-import 'package:system_information/dart/dart.dart';
+import 'package:system_information/system_information.dart';
 
-void main(List<String> args) {
+void main(List<String> args) async {
   final SystemInformation systemInformation = SystemInformation();
-  systemInformation.ensureInitialized(isUseStatic: false);
+  await systemInformation.ensureInitialized(
+    isUseStatic: true,
+  );
   print(systemInformation.toMessage());
+
+  /// if you want get drm or unique id persistant or same
+  /// event app hash uninstalled or device reboot use this method
+  /// i don't add in method or toMessage or toJson
+  /// because this method is privacy or not everyone can show
+  /// becasue this library has design to cross platform
+  /// and i use this in bot so if you want get device drm
+  /// copy code bellow
+  final drmPersistantData = await systemInformation.getDeviceDrmId();
+  print(drmPersistantData);
+
+  /// persistant data only work on android and ios
+  /// on ios i not tested but if you want
+  /// you can help me donate for me buy the ios devices and macbook
+  /// so i can bring more feature to apple devices
+  /// 
+  /// if you cange org or example
+  /// com.example.example
+  /// to
+  /// com.app.your_name
+  /// 
+  /// this drm will change
+  /// but if you change to com.example.example
+  /// again your drm will same
+  ///  
+  /// sorry my english is bad
+  
 }

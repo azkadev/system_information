@@ -26,3 +26,33 @@ abstract class SystemInformationBaseCore {
 abstract class SystemInformationBase implements SystemInformationBaseCore {
   const SystemInformationBase();
 }
+
+
+
+class SystemInformationInvokeStatic<T> {
+  T? data;
+  bool isInitialized;
+  SystemInformationInvokeStatic({
+    this.data,
+    this.isInitialized = false,
+  });
+
+  T? invoke({
+    required bool isUseStatic,
+    required T? Function() onData,
+  }) {
+    try {
+      if (isUseStatic) {
+        if (isInitialized) {
+          return data;
+        }
+        data = onData();
+        isInitialized = true;
+        return data;
+      }
+      return onData();
+    } catch (e) {
+      return null;
+    }
+  }
+}

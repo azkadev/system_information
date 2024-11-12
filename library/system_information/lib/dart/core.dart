@@ -4,6 +4,7 @@ library system_information;
 
 // import 'package:filesize/filesize.dart';
 import 'dart:async';
+import 'dart:math';
 
 import 'package:general_lib/general_lib.dart';
 import 'package:system_information/base/base.dart';
@@ -18,75 +19,88 @@ import "package:system_information/flutter/device_drm/device_drm.dart" as device
 import 'base/system_information_base.dart' as sys_info;
 
 final DateTime _date_start = DateTime.now();
+final String _uniqueId = generateUuid(Random().nextInt(20) + 5);
+typedef SystemInformationInvokeFunction<T> = T Function(T originValue);
+
+T systemInformationInvokeFunctiondefaultValueFunction<T>(T originValue) {
+  return originValue;
+}
 
 class SystemInformation extends SystemInformationBase {
-  static DateTime get date_start => _date_start;
+  /// start
   static bool is_use_static = true;
+  static SystemInformationInvokeFunction<String> onGetModel = systemInformationInvokeFunctiondefaultValueFunction<String>;
+  static SystemInformationInvokeFunction<String> onGetTitle = systemInformationInvokeFunctiondefaultValueFunction<String>;
+
+  static SystemInformationInvokeStatic<String> gpuStatic = SystemInformationInvokeStatic();
+  static SystemInformationInvokeStatic<String> networkStatic = SystemInformationInvokeStatic();
+  static SystemInformationInvokeStatic<String> diskStatic = SystemInformationInvokeStatic();
+  static SystemInformationInvokeStatic<String> uptimeStatic = SystemInformationInvokeStatic();
+  static SystemInformationInvokeStatic<String> kernelStatic = SystemInformationInvokeStatic();
+  static SystemInformationInvokeStatic<String> shellStatic = SystemInformationInvokeStatic();
+  static SystemInformationInvokeStatic<String> titleStatic = SystemInformationInvokeStatic();
+  static SystemInformationInvokeStatic<Future<String>> archStatic = SystemInformationInvokeStatic();
+  static SystemInformationInvokeStatic<String> modelStatic = SystemInformationInvokeStatic();
+
+  /// end
 
   const SystemInformation();
 
   FutureOr<void> ensureInitialized({
-    required bool isUseStatic,
+    bool? isUseStatic,
+    SystemInformationInvokeFunction<String>? onInvokeModel,
+    SystemInformationInvokeFunction<String>? onInvokeTitle,
   }) async {
-    SystemInformation.is_use_static = isUseStatic;
+    if (isUseStatic != null) {
+      is_use_static = isUseStatic;
+    }
+    if (onInvokeModel != null) {
+      onGetModel = onInvokeModel;
+    }
+    if (onInvokeTitle != null) {
+      onGetTitle = onInvokeTitle;
+    }
+  }
 
-  } 
+  DateTime get date_start => _date_start;
+  String get uniqueId => _uniqueId;
 
-  static String? get_gpu_static;
-  static bool is_init_get_gpu = false;
-  static String? get get_gpu {
+  String? get get_executable_type {
     try {
-      if (is_use_static) {
-        if (is_init_get_gpu) {
-          return get_gpu_static;
-        }
-        get_gpu_static = sys_info.gpuInfo;
-        is_init_get_gpu = true;
-        return get_gpu_static;
-      }
-      return sys_info.gpuInfo;
+      return Dart.executable_type.name;
     } catch (e) {
       return null;
     }
   }
 
-  static String? get_network_static;
-  static bool is_init_get_network = false;
-  static String? get get_network {
-    try {
-      if (is_use_static) {
-        if (is_init_get_network) {
-          return get_network_static;
-        }
-        get_network_static = sys_info.networkInfo;
-        is_init_get_network = true;
-        return get_network_static;
-      }
-      return sys_info.networkInfo;
-    } catch (e) {
-      return null;
-    }
+  String? get get_gpu {
+    return gpuStatic.invoke(
+      isUseStatic: is_use_static,
+      onData: () {
+        return sys_info.gpuInfo;
+      },
+    );
   }
 
-  static String? get_disk_static;
-  static bool is_init_get_disk = false;
-  static String? get get_disk {
-    try {
-      if (is_use_static) {
-        if (is_init_get_disk) {
-          return get_disk_static;
-        }
-        get_disk_static = sys_info.diskInfo;
-        is_init_get_disk = true;
-        return get_disk_static;
-      }
-      return sys_info.diskInfo;
-    } catch (e) {
-      return null;
-    }
+  String? get get_network {
+    return networkStatic.invoke(
+      isUseStatic: is_use_static,
+      onData: () {
+        return sys_info.networkInfo;
+      },
+    );
   }
 
-  static String? get get_power {
+  String? get get_disk {
+    return diskStatic.invoke(
+      isUseStatic: is_use_static,
+      onData: () {
+        return sys_info.diskInfo;
+      },
+    );
+  }
+
+  String? get get_power {
     try {
       final PowerData powerData = getPowerData();
       return "${powerData.level}% ${(powerData.is_charging == true) ? "Charging" : ""}";
@@ -95,143 +109,61 @@ class SystemInformation extends SystemInformationBase {
     }
   }
 
-  static String? get_uptime_static;
-  static bool is_init_get_uptime = false;
-  static String? get get_uptime {
-    try {
-      if (is_use_static) {
-        if (is_init_get_uptime) {
-          return get_uptime_static;
-        }
-        get_uptime_static = sys_info.upTimeInfo;
-        is_init_get_uptime = true;
-        return get_uptime_static;
-      }
-      return sys_info.upTimeInfo;
-    } catch (e) {
-      print(e);
-      return null;
-    }
+  String? get get_uptime {
+    return uptimeStatic.invoke(
+      isUseStatic: is_use_static,
+      onData: () {
+        return sys_info.upTimeInfo;
+      },
+    );
   }
 
-  static String? get_kernel_static;
-  static bool is_init_get_kernel = false;
-
-  static String? get get_kernel {
-    try {
-      if (is_use_static) {
-        if (is_init_get_kernel) {
-          return get_kernel_static;
-        }
-        get_kernel_static = sys_info.kernelInfo;
-        is_init_get_kernel = true;
-        return get_kernel_static;
-      }
-      return sys_info.kernelInfo;
-    } catch (e) {
-      return null;
-    }
+  String? get get_kernel {
+    return kernelStatic.invoke(
+      isUseStatic: is_use_static,
+      onData: () {
+        return sys_info.kernelInfo;
+      },
+    );
   }
 
-  static String? get_shell_static;
-  static bool is_init_get_shell = false;
-
-  static String? get get_shell {
-    try {
-      if (is_use_static) {
-        if (is_init_get_shell) {
-          return get_shell_static;
-        }
-        get_shell_static = sys_info.shellInfo;
-        is_init_get_shell = true;
-        return get_shell_static;
-      }
-      return sys_info.shellInfo;
-    } catch (e) {
-      return null;
-    }
+  String? get get_shell {
+    return shellStatic.invoke(
+      isUseStatic: is_use_static,
+      onData: () {
+        return sys_info.shellInfo;
+      },
+    );
   }
 
-  static String Function(String origin_model) onGetTitle = (String originModel) {
-    return originModel;
-  };
-  static String? get_title_static;
-  static bool is_init_get_title = false;
-
-  static String? get get_title {
-    try {
-      if (is_use_static) {
-        if (is_init_get_title) {
-          return get_title_static;
-        }
-        get_title_static = onGetTitle(sys_info.titleInfo.trim());
-        is_init_get_title = true;
-        return get_title_static;
-      }
-      return onGetTitle(sys_info.titleInfo.trim());
-    } catch (e) {
-      try {
-        return sys_info.titleInfo.trim();
-      } catch (e) {
-        return null;
-      }
-    }
+  String? get get_title {
+    return titleStatic.invoke(
+      isUseStatic: is_use_static,
+      onData: () {
+        return onGetTitle(sys_info.titleInfo.trim());
+      },
+    );
   }
 
-  static String? get_arch_static;
-  static bool is_init_get_arch = false;
-  static Future<String?> get get_arch async {
-    try {
-      if (is_use_static) {
-        if (is_init_get_arch) {
-          return get_arch_static;
-        }
-        get_arch_static = await sys_info.archInfo();
-        is_init_get_arch = true;
-        return get_arch_static;
-      }
-      return await sys_info.archInfo();
-    } catch (e) {
-      return null;
-    }
+  Future<String?> get get_arch async {
+    return archStatic.invoke(
+      isUseStatic: is_use_static,
+      onData: () async {
+        return (await sys_info.archInfo());
+      },
+    );
   }
 
-  static String? get get_executable_type {
-    try {
-      return Dart.executable_type.name;
-    } catch (e) {
-      return null;
-    }
+  String? get get_model {
+    return modelStatic.invoke(
+      isUseStatic: is_use_static,
+      onData: () {
+        return onGetModel(sys_info.modelInfo.trim());
+      },
+    );
   }
 
-  static String Function(String origin_model) onGetModel = (String originModel) {
-    return originModel;
-  };
-
-  static String? get_model_static;
-  static bool is_init_get_model = false;
-  static String? get get_model {
-    try {
-      if (is_use_static) {
-        if (is_init_get_model) {
-          return get_model_static;
-        }
-        get_model_static = onGetModel(sys_info.modelInfo.trim());
-        is_init_get_model = true;
-        return get_model_static;
-      }
-
-      return onGetModel(sys_info.modelInfo.trim());
-    } catch (e) {
-      try {
-        return sys_info.modelInfo.trim();
-      } catch (e) {
-        return null;
-      }
-    }
-  }
-
-  static int? get_ram_usage_by_pid({
+  int? get_ram_usage_by_pid({
     int? pidProcces,
   }) {
     try {
@@ -243,7 +175,7 @@ class SystemInformation extends SystemInformationBase {
     }
   }
 
-  static MemoryData? get get_ram_data {
+  MemoryData? get get_ram_data {
     try {
       return getRamData();
     } catch (e) {
@@ -251,7 +183,7 @@ class SystemInformation extends SystemInformationBase {
     }
   }
 
-  static String? get get_power_consumtion {
+  String? get get_power_consumtion {
     try {
       return powerConsumtion();
     } catch (e) {
@@ -259,11 +191,11 @@ class SystemInformation extends SystemInformationBase {
     }
   }
 
-  static (int download, int upload) get get_network_bandwith_usage {
+  (int download, int upload) get get_network_bandwith_usage {
     return getNetworkBandwithUsage();
   }
 
-  static (int download, int upload) get_network_bandwith_usage_by_pid({
+  (int download, int upload) get_network_bandwith_usage_by_pid({
     int? pidProcces,
   }) {
     return getNetworkBandwithUsageByPid(
@@ -391,6 +323,8 @@ class SystemInformation extends SystemInformationBase {
           pidProcces: pidProcces,
         ),
       ),
+      "program_unique_id": _uniqueId,
+      "system_information_version": "0.0.0"
     };
 
     data.removeWhere((key, value) => value == null);
@@ -433,19 +367,19 @@ class SystemInformation extends SystemInformationBase {
     return message;
   }
 
-  Stream<Map> realtimeToJson({
+  Stream<SystemInformationData> realtime({
     Duration? durationDelay,
   }) async* {
-    yield toJson();
+    yield toJsonScheme();
     await Future.delayed(durationDelay ?? Duration(seconds: 1));
     while (true) {
       await Future.delayed(durationDelay ?? Duration(seconds: 1));
-      yield toJson();
+      yield toJsonScheme();
     }
   }
 
   @override
-  Future<String> getDeviceDrmId() async { 
+  Future<String> getDeviceDrmId() async {
     return await device_drm.getDeviceDrmId();
   }
 
