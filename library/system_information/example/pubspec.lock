@@ -640,14 +640,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "3.0.2"
-  safe_device:
-    dependency: transitive
-    description:
-      name: safe_device
-      sha256: ae53e6ad4b7e3a9a89c3317636b52babd5916a6bf8c1e83ca82264cf82f6b2cc
-      url: "https://pub.dev"
-    source: hosted
-    version: "1.1.9"
   safe_local_storage:
     dependency: transitive
     description:
@@ -795,14 +787,15 @@ packages:
       path: ".."
       relative: true
     source: path
-    version: "0.0.24"
+    version: "0.0.0"
   system_information_flutter:
     dependency: transitive
     description:
-      path: "../../system_information_flutter"
-      relative: true
-    source: path
-    version: "0.0.1"
+      name: system_information_flutter
+      sha256: be96bc4d5da5bdc2b426b555c08039698c1aa44295fbce1077715c5e468c60cd
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.0.0"
   term_glyph:
     dependency: transitive
     description:

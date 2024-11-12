@@ -13,11 +13,6 @@
 
 include: package:lints/recommended.yaml
 
-analyzer: 
-  exclude:
-    - bin/
-    - lib/
-    - example/
 # Uncomment the following section to specify additional rules.
 
 # linter:

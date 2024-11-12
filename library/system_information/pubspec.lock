@@ -146,7 +146,7 @@ packages:
     source: hosted
     version: "1.1.1"
   flutter:
-    dependency: transitive
+    dependency: "direct main"
     description: flutter
     source: sdk
     version: "0.0.0"
@@ -438,10 +438,11 @@ packages:
   system_information_flutter:
     dependency: "direct main"
     description:
-      path: "../system_information_flutter"
-      relative: true
-    source: path
-    version: "0.0.1"
+      name: system_information_flutter
+      sha256: be96bc4d5da5bdc2b426b555c08039698c1aa44295fbce1077715c5e468c60cd
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.0.0"
   term_glyph:
     dependency: transitive
     description:
@@ -571,5 +572,5 @@ packages:
     source: hosted
     version: "0.2.3"
 sdks:
-  dart: ">=3.5.3 <4.0.0"
+  dart: ">=3.5.0 <4.0.0"
   flutter: ">=3.3.0"
