@@ -3,7 +3,6 @@ description: 'A library for get system info detail like ram or proccesor ram in 
 version: '0.0.0'
 homepage: 'https://github.com/azkadev/azkadev'
 repository: 'https://github.com/azkadev/system_information'
-
 environment: 
   sdk: '>=3.3.3 <4.0.0'
 platforms: 
