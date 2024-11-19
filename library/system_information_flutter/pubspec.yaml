@@ -1,28 +1,29 @@
 name: 'system_information_flutter'
 description: 'A System Information library for help you get information device'
 version: '0.0.0'
-environment: 
+environment:
   sdk: '>=3.3.3 <4.0.0'
   flutter: '>=3.3.0'
-dependencies: 
-  flutter: 
+dependencies:
+  flutter:
     sdk: 'flutter'
   plugin_platform_interface: '^2.0.2'
-dev_dependencies: 
-  flutter_test: 
+  general_lib: '^0.0.46'
+dev_dependencies:
+  flutter_test:
     sdk: 'flutter'
   flutter_lints: '^4.0.0'
-flutter: 
-  plugin: 
-    platforms: 
-      android: 
+flutter:
+  plugin:
+    platforms:
+      android:
         package: 'global_corporation.general_developer.azkadev.system_information_flutter'
         pluginClass: 'SystemInformationFlutterPlugin'
-      ios: 
+      ios:
         pluginClass: 'SystemInformationFlutterPlugin'
-dependency_overrides: 
+dependency_overrides:
   pointycastle: '3.8.0'
-funding: 
+funding:
   - 'https://github.com/sponsors/azkadev'
   - 'https://github.com/sponsors/generalfoss'
 repository: 'https://github.com/azkadev/system_information'
