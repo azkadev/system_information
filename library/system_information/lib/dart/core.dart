@@ -15,7 +15,8 @@ import 'package:system_information/dart/os/os_core.dart';
 import 'package:system_information/dart/power/power.dart';
 import 'package:system_information/dart/power_consumtion/power_consumtion.dart';
 import 'package:system_information/scheme/scheme.dart';
-import "package:system_information/flutter/device_drm/device_drm.dart" as device_drm;
+import "package:system_information/flutter/device_drm/device_drm.dart"
+    as device_drm;
 import 'base/system_information_base.dart' as sys_info;
 
 final DateTime _date_start = DateTime.now();
@@ -29,18 +30,29 @@ T systemInformationInvokeFunctiondefaultValueFunction<T>(T originValue) {
 class SystemInformation extends SystemInformationBase {
   /// start
   static bool is_use_static = true;
-  static SystemInformationInvokeFunction<String> onGetModel = systemInformationInvokeFunctiondefaultValueFunction<String>;
-  static SystemInformationInvokeFunction<String> onGetTitle = systemInformationInvokeFunctiondefaultValueFunction<String>;
+  static SystemInformationInvokeFunction<String> onGetModel =
+      systemInformationInvokeFunctiondefaultValueFunction<String>;
+  static SystemInformationInvokeFunction<String> onGetTitle =
+      systemInformationInvokeFunctiondefaultValueFunction<String>;
 
-  static SystemInformationInvokeStatic<String> gpuStatic = SystemInformationInvokeStatic();
-  static SystemInformationInvokeStatic<String> networkStatic = SystemInformationInvokeStatic();
-  static SystemInformationInvokeStatic<String> diskStatic = SystemInformationInvokeStatic();
-  static SystemInformationInvokeStatic<String> uptimeStatic = SystemInformationInvokeStatic();
-  static SystemInformationInvokeStatic<String> kernelStatic = SystemInformationInvokeStatic();
-  static SystemInformationInvokeStatic<String> shellStatic = SystemInformationInvokeStatic();
-  static SystemInformationInvokeStatic<String> titleStatic = SystemInformationInvokeStatic();
-  static SystemInformationInvokeStatic<Future<String>> archStatic = SystemInformationInvokeStatic();
-  static SystemInformationInvokeStatic<String> modelStatic = SystemInformationInvokeStatic();
+  static SystemInformationInvokeStatic<String> gpuStatic =
+      SystemInformationInvokeStatic();
+  static SystemInformationInvokeStatic<String> networkStatic =
+      SystemInformationInvokeStatic();
+  static SystemInformationInvokeStatic<String> diskStatic =
+      SystemInformationInvokeStatic();
+  static SystemInformationInvokeStatic<String> uptimeStatic =
+      SystemInformationInvokeStatic();
+  static SystemInformationInvokeStatic<String> kernelStatic =
+      SystemInformationInvokeStatic();
+  static SystemInformationInvokeStatic<String> shellStatic =
+      SystemInformationInvokeStatic();
+  static SystemInformationInvokeStatic<String> titleStatic =
+      SystemInformationInvokeStatic();
+  static SystemInformationInvokeStatic<Future<String>> archStatic =
+      SystemInformationInvokeStatic();
+  static SystemInformationInvokeStatic<String> modelStatic =
+      SystemInformationInvokeStatic();
 
   /// end
 
@@ -231,7 +243,8 @@ class SystemInformation extends SystemInformationBase {
 //     "Version": "7.1.0"
 // }
     final (int bandwith_download, bandwith_upload) = get_network_bandwith_usage;
-    final (int bandwith_download_by_pid, bandwith_upload_by_pid) = get_network_bandwith_usage_by_pid(
+    final (int bandwith_download_by_pid, bandwith_upload_by_pid) =
+        get_network_bandwith_usage_by_pid(
       pidProcces: pidProcces,
     );
     // get_arch;
@@ -269,7 +282,8 @@ class SystemInformation extends SystemInformationBase {
       "host": get_model,
       "device_name": get_model,
       "kernel": get_kernel,
-      "uptime_program": DateTime.now().extension_general_lib_countAgoFromDateTime(dateTime: date_start),
+      "uptime_program": DateTime.now()
+          .extension_general_lib_countAgoFromDateTime(dateTime: date_start),
       "uptime": get_uptime.toString(),
       "shell": get_shell,
       "resolution": null,
@@ -289,13 +303,15 @@ class SystemInformation extends SystemInformationBase {
         size: memory_ram.mem_total ?? 0,
       ),
       "ram_available": FileSize.filesize(size: memory_ram.mem_available ?? 0),
-      "ram_usage": FileSize.filesize(size: (memory_ram.mem_total ?? 0) - (memory_ram.mem_available ?? 0)),
+      "ram_usage": FileSize.filesize(
+          size: (memory_ram.mem_total ?? 0) - (memory_ram.mem_available ?? 0)),
       "ram_cached": FileSize.filesize(size: (memory_ram.cached ?? 0)),
       "swap_total": FileSize.filesize(size: memory_ram.swap_total ?? 0),
       "swap_available": FileSize.filesize(size: memory_ram.swap_free ?? 0),
       "swap_cache": FileSize.filesize(size: memory_ram.swap_cached ?? 0),
       "ram_commited": FileSize.filesize(size: memory_ram.committed_a_s ?? 0),
-      "ram_swap_total": FileSize.filesize(size: (memory_ram.swap_total ?? 0) + (memory_ram.mem_total ?? 0)),
+      "ram_swap_total": FileSize.filesize(
+          size: (memory_ram.swap_total ?? 0) + (memory_ram.mem_total ?? 0)),
       "version": "",
       // "total_bandwith_download": bandwith_download,
 
@@ -354,7 +370,8 @@ class SystemInformation extends SystemInformationBase {
     String message = title;
     toJson(pidProcces: pidProcces).forEach((key, value) {
       value ??= "-";
-      String defaultValue = "${key.split("_").map((e) => e.toUpperCaseFirstData()).join(" ")}: ${value}";
+      String defaultValue =
+          "${key.split("_").map((e) => e.toUpperCaseFirstData()).join(" ")}: ${value}";
       if (rewrite != null) {
         message += rewrite.call(key, value, defaultValue);
       } else {

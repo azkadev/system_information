@@ -38,5 +38,6 @@ import 'package:path/path.dart';
 import 'package:universal_io/io.dart';
 
 void main(List<String> args) async {
-  await jsonToScripts(schemes, directory: Directory(join(Directory.current.path, "lib", "scheme")));
+  await jsonToScripts(schemes,
+      directory: Directory(join(Directory.current.path, "lib", "scheme")));
 }

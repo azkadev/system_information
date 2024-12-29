@@ -1,4 +1,3 @@
- 
 final List<Map> schemes = [
   {
     "@type": "memoryData",
@@ -89,7 +88,8 @@ final List<Map> schemes = [
     "cpu": "AMD Ryzen 5 5500U with Radeon Graphics (12)",
     "gpu": "Advanced Micro Devices, Inc. [AMD/ATI] Lucienne",
     "network": "MEDIATEK Corp. MT7921K (RZ608) Wi-Fi 6E 80MHz",
-    "disk": "Kingston Technology Company, Inc. OM8PCP Design-In PCIe 3 NVMe SSD (DRAM-less)",
+    "disk":
+        "Kingston Technology Company, Inc. OM8PCP Design-In PCIe 3 NVMe SSD (DRAM-less)",
     "power": "86% Charging",
     "ram_total": "15 GB",
     "ram_available": "8 GB",

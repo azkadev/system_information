@@ -34,8 +34,7 @@ Bukan maksud kami menipu itu karena harga yang sudah di kalkulasi + bantuan tiba
 <!-- END LICENSE --> */
 
 import 'dart:async';
- 
 
-FutureOr<String> getDeviceDrmId()async {
+FutureOr<String> getDeviceDrmId() async {
   return "";
 }

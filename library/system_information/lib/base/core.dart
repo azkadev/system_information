@@ -1,6 +1,6 @@
 import 'dart:convert';
 
- import 'package:system_information/scheme/scheme.dart';
+import 'package:system_information/scheme/scheme.dart';
 
 abstract class SystemInformationBaseCore {
   Future<String> getDeviceDrmId() async {
@@ -26,8 +26,6 @@ abstract class SystemInformationBaseCore {
 abstract class SystemInformationBase implements SystemInformationBaseCore {
   const SystemInformationBase();
 }
-
-
 
 class SystemInformationInvokeStatic<T> {
   T? data;

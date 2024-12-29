@@ -55,16 +55,15 @@ void main(List<String> args) async {
   /// on ios i not tested but if you want
   /// you can help me donate for me buy the ios devices and macbook
   /// so i can bring more feature to apple devices
-  /// 
+  ///
   /// if you cange org or example
   /// com.example.example
   /// to
   /// com.app.your_name
-  /// 
+  ///
   /// this drm will change
   /// but if you change to com.example.example
   /// again your drm will same
-  ///  
+  ///
   /// sorry my english is bad
-  
 }

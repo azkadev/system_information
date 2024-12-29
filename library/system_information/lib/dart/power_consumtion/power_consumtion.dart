@@ -1,6 +1,6 @@
 // ignore_for_file: empty_catches, unnecessary_brace_in_string_interps, non_constant_identifier_names
 
-import 'package:universal_io/io.dart'; 
+import 'package:universal_io/io.dart';
 
 const _bat0Path = "/sys/class/power_supply/BAT0";
 const _bat1Path = "/sys/class/power_supply/BAT1";
@@ -19,7 +19,7 @@ extension _Exkaksoaksoakoko on File {
   }
 }
 
-String powerConsumtion()  {
+String powerConsumtion() {
   final String realBatPath = () {
     if (Directory(_bat1Path).existsSync()) {
       return _bat1Path;
@@ -40,7 +40,9 @@ String powerConsumtion()  {
         }
       }
       {
-        return (File(realBatPath + _currentNowFile)._get_file_value() * File(realBatPath + _voltageNowFile)._get_file_value()) / 1000000000000;
+        return (File(realBatPath + _currentNowFile)._get_file_value() *
+                File(realBatPath + _voltageNowFile)._get_file_value()) /
+            1000000000000;
       }
     } catch (e) {}
     return 0;
@@ -61,5 +63,4 @@ String powerConsumtion()  {
     return "";
   }();
   return ("${status}${power} W");
-  
 }

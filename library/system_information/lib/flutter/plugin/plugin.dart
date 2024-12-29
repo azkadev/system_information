@@ -7,7 +7,8 @@ import 'package:general_lib/general_lib.dart';
 
 /// An implementation of [SystemInformationFlutterPlatform] that uses method channels.
 class MethodChannelSystemInformationFlutter {
-  static final methodChannel = const MethodChannel('system_information_flutter');
+  static final methodChannel =
+      const MethodChannel('system_information_flutter');
 
   /// only work for android and ios
   static FutureOr<String> getDeviceDrmId() async {
@@ -16,7 +17,8 @@ class MethodChannelSystemInformationFlutter {
         return "";
       }
       if (Dart.isAndroid || Dart.isIOS) {
-        return (await methodChannel.invokeMethod<String?>('getDeviceDrmId')) ?? "";
+        return (await methodChannel.invokeMethod<String?>('getDeviceDrmId')) ??
+            "";
       }
     } catch (e) {
       return "";

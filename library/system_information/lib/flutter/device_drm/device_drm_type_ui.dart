@@ -36,6 +36,6 @@ import 'dart:async';
 
 import 'package:system_information/flutter/plugin/plugin.dart';
 
-FutureOr<String> getDeviceDrmId() async { 
+FutureOr<String> getDeviceDrmId() async {
   return await MethodChannelSystemInformationFlutter.getDeviceDrmId();
 }
