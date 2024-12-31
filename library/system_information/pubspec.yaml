@@ -18,7 +18,7 @@ dev_dependencies:
 dependencies:
   flutter:
     sdk: 'flutter'
-  universal_io: '^2.2.2'
+  io_universe: '^0.0.2'
   general_lib: '^0.0.51'
   path: '^1.9.0'
   system_information_flutter: '^0.0.5'

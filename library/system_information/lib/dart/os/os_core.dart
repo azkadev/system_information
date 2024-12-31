@@ -36,7 +36,7 @@ Bukan maksud kami menipu itu karena harga yang sudah di kalkulasi + bantuan tiba
 
 import 'package:general_lib/general_lib.dart';
 import 'package:system_information/scheme/scheme.dart';
-import 'package:universal_io/io.dart';
+import 'package:io_universe/io_universe.dart';
 
 OperatingSystemData getOperatingSystemData({
   bool isThrowOnError = false,
@@ -81,10 +81,7 @@ OperatingSystemData getOperatingSystemData({
           variables[split[0]] = split[1];
         }
       }
-      String os = variables["PRETTY_NAME"] ??
-          variables["NAME"] ??
-          variables["ID"] ??
-          "";
+      String os = variables["PRETTY_NAME"] ?? variables["NAME"] ?? variables["ID"] ?? "";
       if (os.startsWith('"')) {
         os = os.substring(1, os.length - 1);
       }

@@ -35,7 +35,7 @@ Bukan maksud kami menipu itu karena harga yang sudah di kalkulasi + bantuan tiba
 // ignore_for_file: non_constant_identifier_names, unnecessary_brace_in_string_interps, unnecessary_string_interpolations, empty_catches
 
 import 'package:general_lib/general_lib.dart';
-import 'package:universal_io/io.dart';
+import 'package:io_universe/io_universe.dart';
 
 (int bandwith_download, int bandwith_upload) getNetworkBandwithUsageByPid({
   int? pidProcces,
@@ -59,10 +59,7 @@ import 'package:universal_io/io.dart';
         for (var i = 0; i < datas.length; i++) {
           final String data_loop = datas[i];
 
-          List<String> data_loops = data_loop
-              .split(" ")
-              .where((element) => element.trim().isNotEmpty)
-              .toList();
+          List<String> data_loops = data_loop.split(" ").where((element) => element.trim().isNotEmpty).toList();
           if (data_loops.isEmpty) {
             continue;
           }
@@ -102,10 +99,7 @@ import 'package:universal_io/io.dart';
         for (var i = 0; i < datas.length; i++) {
           final String data_loop = datas[i];
 
-          final List<String> data_loops = data_loop
-              .split(" ")
-              .where((element) => element.trim().isNotEmpty)
-              .toList();
+          final List<String> data_loops = data_loop.split(" ").where((element) => element.trim().isNotEmpty).toList();
           if (data_loops.isEmpty) {
             continue;
           }
