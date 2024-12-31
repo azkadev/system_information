@@ -1,3 +1,8 @@
+## 0.0.7
+
+- New Version 0.0.7
+
+
 ## 0.0.0
 
 - Add network Info: Examples = MEDIATEK Corp. MT7921K (RZ608) Wi-Fi 6E 80MHz.

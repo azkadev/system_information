@@ -1,6 +1,6 @@
 name: 'system_information'
 description: 'A library for get system info detail like ram or proccesor ram in dart support client side and server side.'
-version: '0.0.6'
+version: '0.0.7'
 homepage: 'https://github.com/azkadev/azkadev'
 repository: 'https://github.com/azkadev/system_information'
 environment:
@@ -19,9 +19,9 @@ dependencies:
   flutter:
     sdk: 'flutter'
   io_universe: '^0.0.2'
-  general_lib: '^0.0.52'
+  general_lib: '^0.0.53'
   path: '^1.9.0'
-  system_information_flutter: '^0.0.6'
+  system_information_flutter: '^0.0.7'
 dependency_overrides:
   pointycastle: '3.8.0'
   mime: '^2.0.0'
