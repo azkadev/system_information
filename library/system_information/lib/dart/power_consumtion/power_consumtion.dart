@@ -40,7 +40,9 @@ String powerConsumtion() {
         }
       }
       {
-        return (File(realBatPath + _currentNowFile)._get_file_value() * File(realBatPath + _voltageNowFile)._get_file_value()) / 1000000000000;
+        return (File(realBatPath + _currentNowFile)._get_file_value() *
+                File(realBatPath + _voltageNowFile)._get_file_value()) /
+            1000000000000;
       }
     } catch (e) {}
     return 0;

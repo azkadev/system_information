@@ -175,7 +175,7 @@ String? get shellInfo {
   if (Dart.isAndroid) {
     return "terminal";
   }
-  String? shellPath = Platform.environment["SHELL"];
+  String shellPath = Platform.environment["SHELL"] ?? "";
   final String shell = shellPath.split("/").last.trim();
   String version = "";
   switch (shell) {
