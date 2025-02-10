@@ -10,7 +10,6 @@ dependencies:
   cupertino_icons: '^1.0.6'
   path: '^1.9.0'
   general_lib: '^0.0.63'
-  general: '^0.0.46'
   system_information: '^0.0.10'
 dev_dependencies:
   flutter_test:
