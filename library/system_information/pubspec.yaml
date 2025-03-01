@@ -19,7 +19,7 @@ dependencies:
   flutter:
     sdk: 'flutter'
   io_universe: '^0.0.5'
-  general_lib: '^0.0.63'
+  general_lib: '^0.0.66'
   path: '^1.9.0'
   system_information_flutter: '^0.0.10'
 dependency_overrides:
@@ -30,3 +30,5 @@ funding:
   - 'https://github.com/sponsors/generalfoss'
 issue_tracker: 'https://t.me/DEVELOPER_GLOBAL_PUBLIC'
 documentation: 'https://youtube.com/@azkadev'
+project:
+  type: ''
