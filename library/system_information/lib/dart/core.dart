@@ -1,6 +1,6 @@
 // ignore_for_file: non_constant_identifier_names, unnecessary_brace_in_string_interps, constant_identifier_names, unused_local_variable
 
-library system_information;
+library;
 
 // import 'package:filesize/filesize.dart';
 import 'dart:async';
@@ -21,36 +21,61 @@ import 'base/system_information_base.dart' as sys_info;
 
 final DateTime _date_start = DateTime.now();
 final String _uniqueId = generateUuid(Random().nextInt(20) + 5);
+
+/// General Library Documentation Undocument By General Corporation & Global Corporation & General Developer
 typedef SystemInformationInvokeFunction<T> = T Function(T originValue);
 
+/// General Library Documentation Undocument By General Corporation & Global Corporation & General Developer
 T systemInformationInvokeFunctiondefaultValueFunction<T>(T originValue) {
   return originValue;
 }
 
+/// General Library Documentation Undocument By General Corporation & Global Corporation & General Developer
 class SystemInformation extends SystemInformationBase {
   /// start
   static bool is_use_static = true;
+
+  /// General Library Documentation Undocument By General Corporation & Global Corporation & General Developer
   static SystemInformationInvokeFunction<String> onGetModel =
       systemInformationInvokeFunctiondefaultValueFunction<String>;
+
+  /// General Library Documentation Undocument By General Corporation & Global Corporation & General Developer
   static SystemInformationInvokeFunction<String> onGetTitle =
       systemInformationInvokeFunctiondefaultValueFunction<String>;
 
+  /// General Library Documentation Undocument By General Corporation & Global Corporation & General Developer
   static SystemInformationInvokeStatic<String> gpuStatic =
       SystemInformationInvokeStatic();
+
+  /// General Library Documentation Undocument By General Corporation & Global Corporation & General Developer
   static SystemInformationInvokeStatic<String> networkStatic =
       SystemInformationInvokeStatic();
+
+  /// General Library Documentation Undocument By General Corporation & Global Corporation & General Developer
   static SystemInformationInvokeStatic<String> diskStatic =
       SystemInformationInvokeStatic();
+
+  /// General Library Documentation Undocument By General Corporation & Global Corporation & General Developer
   static SystemInformationInvokeStatic<String> uptimeStatic =
       SystemInformationInvokeStatic();
+
+  /// General Library Documentation Undocument By General Corporation & Global Corporation & General Developer
   static SystemInformationInvokeStatic<String> kernelStatic =
       SystemInformationInvokeStatic();
+
+  /// General Library Documentation Undocument By General Corporation & Global Corporation & General Developer
   static SystemInformationInvokeStatic<String> shellStatic =
       SystemInformationInvokeStatic();
+
+  /// General Library Documentation Undocument By General Corporation & Global Corporation & General Developer
   static SystemInformationInvokeStatic<String> titleStatic =
       SystemInformationInvokeStatic();
+
+  /// General Library Documentation Undocument By General Corporation & Global Corporation & General Developer
   static SystemInformationInvokeStatic<Future<String>> archStatic =
       SystemInformationInvokeStatic();
+
+  /// General Library Documentation Undocument By General Corporation & Global Corporation & General Developer
   static SystemInformationInvokeStatic<String> modelStatic =
       SystemInformationInvokeStatic();
 
@@ -58,6 +83,7 @@ class SystemInformation extends SystemInformationBase {
 
   const SystemInformation();
 
+  /// General Library Documentation Undocument By General Corporation & Global Corporation & General Developer
   FutureOr<void> ensureInitialized({
     bool? isUseStatic,
     SystemInformationInvokeFunction<String>? onInvokeModel,
@@ -74,9 +100,13 @@ class SystemInformation extends SystemInformationBase {
     }
   }
 
+  /// General Library Documentation Undocument By General Corporation & Global Corporation & General Developer
   DateTime get date_start => _date_start;
+
+  /// General Library Documentation Undocument By General Corporation & Global Corporation & General Developer
   String get uniqueId => _uniqueId;
 
+  /// General Library Documentation Undocument By General Corporation & Global Corporation & General Developer
   String? get get_executable_type {
     try {
       return Dart.executable_type.name;
@@ -85,6 +115,7 @@ class SystemInformation extends SystemInformationBase {
     }
   }
 
+  /// General Library Documentation Undocument By General Corporation & Global Corporation & General Developer
   String? get get_gpu {
     return gpuStatic.invoke(
       isUseStatic: is_use_static,
@@ -94,6 +125,7 @@ class SystemInformation extends SystemInformationBase {
     );
   }
 
+  /// General Library Documentation Undocument By General Corporation & Global Corporation & General Developer
   String? get get_network {
     return networkStatic.invoke(
       isUseStatic: is_use_static,
@@ -103,6 +135,7 @@ class SystemInformation extends SystemInformationBase {
     );
   }
 
+  /// General Library Documentation Undocument By General Corporation & Global Corporation & General Developer
   String? get get_disk {
     return diskStatic.invoke(
       isUseStatic: is_use_static,
@@ -112,6 +145,7 @@ class SystemInformation extends SystemInformationBase {
     );
   }
 
+  /// General Library Documentation Undocument By General Corporation & Global Corporation & General Developer
   String? get get_power {
     try {
       final PowerData powerData = getPowerData();
@@ -121,6 +155,7 @@ class SystemInformation extends SystemInformationBase {
     }
   }
 
+  /// General Library Documentation Undocument By General Corporation & Global Corporation & General Developer
   String? get get_uptime {
     return uptimeStatic.invoke(
       isUseStatic: is_use_static,
@@ -130,6 +165,7 @@ class SystemInformation extends SystemInformationBase {
     );
   }
 
+  /// General Library Documentation Undocument By General Corporation & Global Corporation & General Developer
   String? get get_kernel {
     return kernelStatic.invoke(
       isUseStatic: is_use_static,
@@ -139,6 +175,7 @@ class SystemInformation extends SystemInformationBase {
     );
   }
 
+  /// General Library Documentation Undocument By General Corporation & Global Corporation & General Developer
   String? get get_shell {
     return shellStatic.invoke(
       isUseStatic: is_use_static,
@@ -148,6 +185,7 @@ class SystemInformation extends SystemInformationBase {
     );
   }
 
+  /// General Library Documentation Undocument By General Corporation & Global Corporation & General Developer
   String? get get_title {
     return titleStatic.invoke(
       isUseStatic: is_use_static,
@@ -157,6 +195,7 @@ class SystemInformation extends SystemInformationBase {
     );
   }
 
+  /// General Library Documentation Undocument By General Corporation & Global Corporation & General Developer
   Future<String?> get get_arch async {
     return archStatic.invoke(
       isUseStatic: is_use_static,
@@ -166,6 +205,7 @@ class SystemInformation extends SystemInformationBase {
     );
   }
 
+  /// General Library Documentation Undocument By General Corporation & Global Corporation & General Developer
   String? get get_model {
     return modelStatic.invoke(
       isUseStatic: is_use_static,
@@ -175,6 +215,7 @@ class SystemInformation extends SystemInformationBase {
     );
   }
 
+  /// General Library Documentation Undocument By General Corporation & Global Corporation & General Developer
   int? get_ram_usage_by_pid({
     int? pidProcces,
   }) {
@@ -187,6 +228,7 @@ class SystemInformation extends SystemInformationBase {
     }
   }
 
+  /// General Library Documentation Undocument By General Corporation & Global Corporation & General Developer
   MemoryData? get get_ram_data {
     try {
       return getRamData();
@@ -195,6 +237,7 @@ class SystemInformation extends SystemInformationBase {
     }
   }
 
+  /// General Library Documentation Undocument By General Corporation & Global Corporation & General Developer
   String? get get_power_consumtion {
     try {
       return powerConsumtion();
@@ -203,10 +246,12 @@ class SystemInformation extends SystemInformationBase {
     }
   }
 
+  /// General Library Documentation Undocument By General Corporation & Global Corporation & General Developer
   (int download, int upload) get get_network_bandwith_usage {
     return getNetworkBandwithUsage();
   }
 
+  /// General Library Documentation Undocument By General Corporation & Global Corporation & General Developer
   (int download, int upload) get_network_bandwith_usage_by_pid({
     int? pidProcces,
   }) {
@@ -304,14 +349,16 @@ class SystemInformation extends SystemInformationBase {
       ),
       "ram_available": FileSize.filesize(size: memory_ram.mem_available ?? 0),
       "ram_usage": FileSize.filesize(
-          size: (memory_ram.mem_total ?? 0) - (memory_ram.mem_available ?? 0)),
+        size: (memory_ram.mem_total ?? 0) - (memory_ram.mem_available ?? 0),
+      ),
       "ram_cached": FileSize.filesize(size: (memory_ram.cached ?? 0)),
       "swap_total": FileSize.filesize(size: memory_ram.swap_total ?? 0),
       "swap_available": FileSize.filesize(size: memory_ram.swap_free ?? 0),
       "swap_cache": FileSize.filesize(size: memory_ram.swap_cached ?? 0),
       "ram_commited": FileSize.filesize(size: memory_ram.committed_a_s ?? 0),
       "ram_swap_total": FileSize.filesize(
-          size: (memory_ram.swap_total ?? 0) + (memory_ram.mem_total ?? 0)),
+        size: (memory_ram.swap_total ?? 0) + (memory_ram.mem_total ?? 0),
+      ),
       "version": "",
       // "total_bandwith_download": bandwith_download,
 
@@ -340,7 +387,7 @@ class SystemInformation extends SystemInformationBase {
         ),
       ),
       "program_unique_id": _uniqueId,
-      "system_information_version": "0.0.0"
+      "system_information_version": "0.0.0",
     };
 
     data.removeWhere((key, value) => value == null);
@@ -354,6 +401,7 @@ class SystemInformation extends SystemInformationBase {
     return data;
   }
 
+  /// General Library Documentation Undocument By General Corporation & Global Corporation & General Developer
   SystemInformationData toSystemInformationData({
     int? pidProcces,
   }) {
@@ -361,6 +409,7 @@ class SystemInformation extends SystemInformationBase {
   }
 
   // @override
+  /// General Library Documentation Undocument By General Corporation & Global Corporation & General Developer
   String toMessage({
     String title = "",
     List<String> ignores = const [],
@@ -384,6 +433,7 @@ class SystemInformation extends SystemInformationBase {
     return message;
   }
 
+  /// General Library Documentation Undocument By General Corporation & Global Corporation & General Developer
   Stream<SystemInformationData> realtime({
     Duration? durationDelay,
   }) async* {

@@ -2,8 +2,16 @@
 import "package:general_lib/general_lib.dart";
 // import "dart:convert";
 
+/// Generated
 class PowerData extends JsonScheme {
+  /// Generated
   PowerData(super.rawData);
+
+  /// return default special type @type
+  /// "powerData"
+  static String get defaultDataSpecialType {
+    return "powerData";
+  }
 
   /// return default data
   ///
@@ -32,6 +40,7 @@ class PowerData extends JsonScheme {
     return PowerData({});
   }
 
+  /// Generated
   String? get special_type {
     try {
       if (rawData["@type"] is String == false) {
@@ -43,10 +52,12 @@ class PowerData extends JsonScheme {
     }
   }
 
+  /// Generated
   set special_type(String? value) {
     rawData["@type"] = value;
   }
 
+  /// Generated
   num? get level {
     try {
       if (rawData["level"] is num == false) {
@@ -58,10 +69,12 @@ class PowerData extends JsonScheme {
     }
   }
 
+  /// Generated
   set level(num? value) {
     rawData["level"] = value;
   }
 
+  /// Generated
   bool? get is_charging {
     try {
       if (rawData["is_charging"] is bool == false) {
@@ -73,10 +86,12 @@ class PowerData extends JsonScheme {
     }
   }
 
+  /// Generated
   set is_charging(bool? value) {
     rawData["is_charging"] = value;
   }
 
+  /// Generated
   static PowerData create({
     bool schemeUtilsIsSetDefaultData = false,
     String special_type = "powerData",

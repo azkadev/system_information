@@ -38,6 +38,7 @@ import 'package:general_lib/general_lib.dart';
 import 'package:system_information/scheme/memory_data.dart';
 import 'package:io_universe/io_universe.dart';
 
+/// General Library Documentation Undocument By General Corporation & Global Corporation & General Developer
 MemoryData getRamData({
   bool isThrowOnError = false,
 }) {
@@ -58,9 +59,11 @@ MemoryData getRamData({
             .replaceAll(RegExp(r"^(_)", caseSensitive: false), "")
             .replaceAll(RegExp(r"(_)$", caseSensitive: false), "")
             .trim();
-        final int value = int.tryParse(RegExp(r"([0-9]+)", caseSensitive: false)
-                    .stringMatch(mem.split(":").last.trim()) ??
-                "0") ??
+        final int value = int.tryParse(
+              RegExp(r"([0-9]+)", caseSensitive: false)
+                      .stringMatch(mem.split(":").last.trim()) ??
+                  "0",
+            ) ??
             0;
         memoryData.addAll({
           key: value * 1024,
@@ -84,9 +87,11 @@ MemoryData getRamData({
             .replaceAll(RegExp(r"^(_)", caseSensitive: false), "")
             .replaceAll(RegExp(r"(_)$", caseSensitive: false), "")
             .trim();
-        final int value = int.tryParse(RegExp(r"([0-9]+)", caseSensitive: false)
-                    .stringMatch(mem.split(":").last.trim()) ??
-                "0") ??
+        final int value = int.tryParse(
+              RegExp(r"([0-9]+)", caseSensitive: false)
+                      .stringMatch(mem.split(":").last.trim()) ??
+                  "0",
+            ) ??
             0;
         memoryData.addAll({
           key: value * 1024,
@@ -104,6 +109,7 @@ MemoryData getRamData({
   return MemoryData.create();
 }
 
+/// General Library Documentation Undocument By General Corporation & Global Corporation & General Developer
 int getRamUsageByPid({
   int? pid_procces,
   bool isThrowOnError = false,
@@ -116,8 +122,10 @@ int getRamUsageByPid({
       final List<String> vm_rss = proc_status
           .readAsStringSync()
           .split("\n")
-          .firstWhere((element) =>
-              RegExp("VmRSS", caseSensitive: false).hasMatch(element))
+          .firstWhere(
+            (element) =>
+                RegExp("VmRSS", caseSensitive: false).hasMatch(element),
+          )
           .replaceAll(RegExp(":", caseSensitive: false), "")
           .split(" ")
           .where((element) => element.isNotEmpty)

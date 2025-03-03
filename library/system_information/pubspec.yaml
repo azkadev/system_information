@@ -18,12 +18,12 @@ dev_dependencies:
 dependencies:
   flutter:
     sdk: 'flutter'
-  io_universe: '^0.0.5'
-  general_lib: '^0.0.66'
+  io_universe: '^0.0.7'
+  general_lib: '^0.0.67'
   path: '^1.9.0'
   system_information_flutter: '^0.0.10'
 dependency_overrides:
-  pointycastle: '3.8.0'
+  pointycastle: '4.0.0'
   mime: '^2.0.0'
 funding:
   - 'https://github.com/sponsors/azkadev'

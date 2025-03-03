@@ -2,8 +2,16 @@
 import "package:general_lib/general_lib.dart";
 // import "dart:convert";
 
+/// Generated
 class OperatingSystemData extends JsonScheme {
+  /// Generated
   OperatingSystemData(super.rawData);
+
+  /// return default special type @type
+  /// "operatingSystemData"
+  static String get defaultDataSpecialType {
+    return "operatingSystemData";
+  }
 
   /// return default data
   ///
@@ -13,7 +21,7 @@ class OperatingSystemData extends JsonScheme {
       "name": "Ubuntu 23.10",
       "arch": "",
       "version": "",
-      "full_name": ""
+      "full_name": "",
     };
   }
 
@@ -38,6 +46,7 @@ class OperatingSystemData extends JsonScheme {
     return OperatingSystemData({});
   }
 
+  /// Generated
   String? get special_type {
     try {
       if (rawData["@type"] is String == false) {
@@ -49,10 +58,12 @@ class OperatingSystemData extends JsonScheme {
     }
   }
 
+  /// Generated
   set special_type(String? value) {
     rawData["@type"] = value;
   }
 
+  /// Generated
   String? get name {
     try {
       if (rawData["name"] is String == false) {
@@ -64,10 +75,12 @@ class OperatingSystemData extends JsonScheme {
     }
   }
 
+  /// Generated
   set name(String? value) {
     rawData["name"] = value;
   }
 
+  /// Generated
   String? get arch {
     try {
       if (rawData["arch"] is String == false) {
@@ -79,10 +92,12 @@ class OperatingSystemData extends JsonScheme {
     }
   }
 
+  /// Generated
   set arch(String? value) {
     rawData["arch"] = value;
   }
 
+  /// Generated
   String? get version {
     try {
       if (rawData["version"] is String == false) {
@@ -94,10 +109,12 @@ class OperatingSystemData extends JsonScheme {
     }
   }
 
+  /// Generated
   set version(String? value) {
     rawData["version"] = value;
   }
 
+  /// Generated
   String? get full_name {
     try {
       if (rawData["full_name"] is String == false) {
@@ -109,10 +126,12 @@ class OperatingSystemData extends JsonScheme {
     }
   }
 
+  /// Generated
   set full_name(String? value) {
     rawData["full_name"] = value;
   }
 
+  /// Generated
   static OperatingSystemData create({
     bool schemeUtilsIsSetDefaultData = false,
     String special_type = "operatingSystemData",

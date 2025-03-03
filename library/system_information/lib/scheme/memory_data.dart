@@ -2,8 +2,16 @@
 import "package:general_lib/general_lib.dart";
 // import "dart:convert";
 
+/// Generated
 class MemoryData extends JsonScheme {
+  /// Generated
   MemoryData(super.rawData);
+
+  /// return default special type @type
+  /// "memoryData"
+  static String get defaultDataSpecialType {
+    return "memoryData";
+  }
 
   /// return default data
   ///
@@ -64,7 +72,7 @@ class MemoryData extends JsonScheme {
       "hugetlb": 0,
       "direct_map4k": 0,
       "direct_map2_m": 0,
-      "direct_map1_g": 0
+      "direct_map1_g": 0,
     };
   }
 
@@ -89,6 +97,7 @@ class MemoryData extends JsonScheme {
     return MemoryData({});
   }
 
+  /// Generated
   String? get special_type {
     try {
       if (rawData["@type"] is String == false) {
@@ -100,10 +109,12 @@ class MemoryData extends JsonScheme {
     }
   }
 
+  /// Generated
   set special_type(String? value) {
     rawData["@type"] = value;
   }
 
+  /// Generated
   num? get mem_total {
     try {
       if (rawData["mem_total"] is num == false) {
@@ -115,10 +126,12 @@ class MemoryData extends JsonScheme {
     }
   }
 
+  /// Generated
   set mem_total(num? value) {
     rawData["mem_total"] = value;
   }
 
+  /// Generated
   num? get mem_free {
     try {
       if (rawData["mem_free"] is num == false) {
@@ -130,10 +143,12 @@ class MemoryData extends JsonScheme {
     }
   }
 
+  /// Generated
   set mem_free(num? value) {
     rawData["mem_free"] = value;
   }
 
+  /// Generated
   num? get mem_available {
     try {
       if (rawData["mem_available"] is num == false) {
@@ -145,10 +160,12 @@ class MemoryData extends JsonScheme {
     }
   }
 
+  /// Generated
   set mem_available(num? value) {
     rawData["mem_available"] = value;
   }
 
+  /// Generated
   num? get buffers {
     try {
       if (rawData["buffers"] is num == false) {
@@ -160,10 +177,12 @@ class MemoryData extends JsonScheme {
     }
   }
 
+  /// Generated
   set buffers(num? value) {
     rawData["buffers"] = value;
   }
 
+  /// Generated
   num? get cached {
     try {
       if (rawData["cached"] is num == false) {
@@ -175,10 +194,12 @@ class MemoryData extends JsonScheme {
     }
   }
 
+  /// Generated
   set cached(num? value) {
     rawData["cached"] = value;
   }
 
+  /// Generated
   num? get swap_cached {
     try {
       if (rawData["swap_cached"] is num == false) {
@@ -190,10 +211,12 @@ class MemoryData extends JsonScheme {
     }
   }
 
+  /// Generated
   set swap_cached(num? value) {
     rawData["swap_cached"] = value;
   }
 
+  /// Generated
   num? get active {
     try {
       if (rawData["active"] is num == false) {
@@ -205,10 +228,12 @@ class MemoryData extends JsonScheme {
     }
   }
 
+  /// Generated
   set active(num? value) {
     rawData["active"] = value;
   }
 
+  /// Generated
   num? get inactive {
     try {
       if (rawData["inactive"] is num == false) {
@@ -220,10 +245,12 @@ class MemoryData extends JsonScheme {
     }
   }
 
+  /// Generated
   set inactive(num? value) {
     rawData["inactive"] = value;
   }
 
+  /// Generated
   num? get active_anon {
     try {
       if (rawData["active_anon"] is num == false) {
@@ -235,10 +262,12 @@ class MemoryData extends JsonScheme {
     }
   }
 
+  /// Generated
   set active_anon(num? value) {
     rawData["active_anon"] = value;
   }
 
+  /// Generated
   num? get inactive_anon {
     try {
       if (rawData["inactive_anon"] is num == false) {
@@ -250,10 +279,12 @@ class MemoryData extends JsonScheme {
     }
   }
 
+  /// Generated
   set inactive_anon(num? value) {
     rawData["inactive_anon"] = value;
   }
 
+  /// Generated
   num? get active_file {
     try {
       if (rawData["active_file"] is num == false) {
@@ -265,10 +296,12 @@ class MemoryData extends JsonScheme {
     }
   }
 
+  /// Generated
   set active_file(num? value) {
     rawData["active_file"] = value;
   }
 
+  /// Generated
   num? get inactive_file {
     try {
       if (rawData["inactive_file"] is num == false) {
@@ -280,10 +313,12 @@ class MemoryData extends JsonScheme {
     }
   }
 
+  /// Generated
   set inactive_file(num? value) {
     rawData["inactive_file"] = value;
   }
 
+  /// Generated
   num? get unevictable {
     try {
       if (rawData["unevictable"] is num == false) {
@@ -295,10 +330,12 @@ class MemoryData extends JsonScheme {
     }
   }
 
+  /// Generated
   set unevictable(num? value) {
     rawData["unevictable"] = value;
   }
 
+  /// Generated
   num? get mlocked {
     try {
       if (rawData["mlocked"] is num == false) {
@@ -310,10 +347,12 @@ class MemoryData extends JsonScheme {
     }
   }
 
+  /// Generated
   set mlocked(num? value) {
     rawData["mlocked"] = value;
   }
 
+  /// Generated
   num? get swap_total {
     try {
       if (rawData["swap_total"] is num == false) {
@@ -325,10 +364,12 @@ class MemoryData extends JsonScheme {
     }
   }
 
+  /// Generated
   set swap_total(num? value) {
     rawData["swap_total"] = value;
   }
 
+  /// Generated
   num? get swap_free {
     try {
       if (rawData["swap_free"] is num == false) {
@@ -340,10 +381,12 @@ class MemoryData extends JsonScheme {
     }
   }
 
+  /// Generated
   set swap_free(num? value) {
     rawData["swap_free"] = value;
   }
 
+  /// Generated
   num? get zswap {
     try {
       if (rawData["zswap"] is num == false) {
@@ -355,10 +398,12 @@ class MemoryData extends JsonScheme {
     }
   }
 
+  /// Generated
   set zswap(num? value) {
     rawData["zswap"] = value;
   }
 
+  /// Generated
   num? get zswapped {
     try {
       if (rawData["zswapped"] is num == false) {
@@ -370,10 +415,12 @@ class MemoryData extends JsonScheme {
     }
   }
 
+  /// Generated
   set zswapped(num? value) {
     rawData["zswapped"] = value;
   }
 
+  /// Generated
   num? get dirty {
     try {
       if (rawData["dirty"] is num == false) {
@@ -385,10 +432,12 @@ class MemoryData extends JsonScheme {
     }
   }
 
+  /// Generated
   set dirty(num? value) {
     rawData["dirty"] = value;
   }
 
+  /// Generated
   num? get writeback {
     try {
       if (rawData["writeback"] is num == false) {
@@ -400,10 +449,12 @@ class MemoryData extends JsonScheme {
     }
   }
 
+  /// Generated
   set writeback(num? value) {
     rawData["writeback"] = value;
   }
 
+  /// Generated
   num? get anon_pages {
     try {
       if (rawData["anon_pages"] is num == false) {
@@ -415,10 +466,12 @@ class MemoryData extends JsonScheme {
     }
   }
 
+  /// Generated
   set anon_pages(num? value) {
     rawData["anon_pages"] = value;
   }
 
+  /// Generated
   num? get mapped {
     try {
       if (rawData["mapped"] is num == false) {
@@ -430,10 +483,12 @@ class MemoryData extends JsonScheme {
     }
   }
 
+  /// Generated
   set mapped(num? value) {
     rawData["mapped"] = value;
   }
 
+  /// Generated
   num? get shmem {
     try {
       if (rawData["shmem"] is num == false) {
@@ -445,10 +500,12 @@ class MemoryData extends JsonScheme {
     }
   }
 
+  /// Generated
   set shmem(num? value) {
     rawData["shmem"] = value;
   }
 
+  /// Generated
   num? get k_reclaimable {
     try {
       if (rawData["k_reclaimable"] is num == false) {
@@ -460,10 +517,12 @@ class MemoryData extends JsonScheme {
     }
   }
 
+  /// Generated
   set k_reclaimable(num? value) {
     rawData["k_reclaimable"] = value;
   }
 
+  /// Generated
   num? get slab {
     try {
       if (rawData["slab"] is num == false) {
@@ -475,10 +534,12 @@ class MemoryData extends JsonScheme {
     }
   }
 
+  /// Generated
   set slab(num? value) {
     rawData["slab"] = value;
   }
 
+  /// Generated
   num? get s_reclaimable {
     try {
       if (rawData["s_reclaimable"] is num == false) {
@@ -490,10 +551,12 @@ class MemoryData extends JsonScheme {
     }
   }
 
+  /// Generated
   set s_reclaimable(num? value) {
     rawData["s_reclaimable"] = value;
   }
 
+  /// Generated
   num? get s_unreclaim {
     try {
       if (rawData["s_unreclaim"] is num == false) {
@@ -505,10 +568,12 @@ class MemoryData extends JsonScheme {
     }
   }
 
+  /// Generated
   set s_unreclaim(num? value) {
     rawData["s_unreclaim"] = value;
   }
 
+  /// Generated
   num? get kernel_stack {
     try {
       if (rawData["kernel_stack"] is num == false) {
@@ -520,10 +585,12 @@ class MemoryData extends JsonScheme {
     }
   }
 
+  /// Generated
   set kernel_stack(num? value) {
     rawData["kernel_stack"] = value;
   }
 
+  /// Generated
   num? get page_tables {
     try {
       if (rawData["page_tables"] is num == false) {
@@ -535,10 +602,12 @@ class MemoryData extends JsonScheme {
     }
   }
 
+  /// Generated
   set page_tables(num? value) {
     rawData["page_tables"] = value;
   }
 
+  /// Generated
   num? get sec_page_tables {
     try {
       if (rawData["sec_page_tables"] is num == false) {
@@ -550,10 +619,12 @@ class MemoryData extends JsonScheme {
     }
   }
 
+  /// Generated
   set sec_page_tables(num? value) {
     rawData["sec_page_tables"] = value;
   }
 
+  /// Generated
   num? get n_f_s_unstable {
     try {
       if (rawData["n_f_s_unstable"] is num == false) {
@@ -565,10 +636,12 @@ class MemoryData extends JsonScheme {
     }
   }
 
+  /// Generated
   set n_f_s_unstable(num? value) {
     rawData["n_f_s_unstable"] = value;
   }
 
+  /// Generated
   num? get bounce {
     try {
       if (rawData["bounce"] is num == false) {
@@ -580,10 +653,12 @@ class MemoryData extends JsonScheme {
     }
   }
 
+  /// Generated
   set bounce(num? value) {
     rawData["bounce"] = value;
   }
 
+  /// Generated
   num? get writeback_tmp {
     try {
       if (rawData["writeback_tmp"] is num == false) {
@@ -595,10 +670,12 @@ class MemoryData extends JsonScheme {
     }
   }
 
+  /// Generated
   set writeback_tmp(num? value) {
     rawData["writeback_tmp"] = value;
   }
 
+  /// Generated
   num? get commit_limit {
     try {
       if (rawData["commit_limit"] is num == false) {
@@ -610,10 +687,12 @@ class MemoryData extends JsonScheme {
     }
   }
 
+  /// Generated
   set commit_limit(num? value) {
     rawData["commit_limit"] = value;
   }
 
+  /// Generated
   num? get committed_a_s {
     try {
       if (rawData["committed_a_s"] is num == false) {
@@ -625,10 +704,12 @@ class MemoryData extends JsonScheme {
     }
   }
 
+  /// Generated
   set committed_a_s(num? value) {
     rawData["committed_a_s"] = value;
   }
 
+  /// Generated
   num? get vmalloc_total {
     try {
       if (rawData["vmalloc_total"] is num == false) {
@@ -640,10 +721,12 @@ class MemoryData extends JsonScheme {
     }
   }
 
+  /// Generated
   set vmalloc_total(num? value) {
     rawData["vmalloc_total"] = value;
   }
 
+  /// Generated
   num? get vmalloc_used {
     try {
       if (rawData["vmalloc_used"] is num == false) {
@@ -655,10 +738,12 @@ class MemoryData extends JsonScheme {
     }
   }
 
+  /// Generated
   set vmalloc_used(num? value) {
     rawData["vmalloc_used"] = value;
   }
 
+  /// Generated
   num? get vmalloc_chunk {
     try {
       if (rawData["vmalloc_chunk"] is num == false) {
@@ -670,10 +755,12 @@ class MemoryData extends JsonScheme {
     }
   }
 
+  /// Generated
   set vmalloc_chunk(num? value) {
     rawData["vmalloc_chunk"] = value;
   }
 
+  /// Generated
   num? get percpu {
     try {
       if (rawData["percpu"] is num == false) {
@@ -685,10 +772,12 @@ class MemoryData extends JsonScheme {
     }
   }
 
+  /// Generated
   set percpu(num? value) {
     rawData["percpu"] = value;
   }
 
+  /// Generated
   num? get hardware_corrupted {
     try {
       if (rawData["hardware_corrupted"] is num == false) {
@@ -700,10 +789,12 @@ class MemoryData extends JsonScheme {
     }
   }
 
+  /// Generated
   set hardware_corrupted(num? value) {
     rawData["hardware_corrupted"] = value;
   }
 
+  /// Generated
   num? get anon_huge_pages {
     try {
       if (rawData["anon_huge_pages"] is num == false) {
@@ -715,10 +806,12 @@ class MemoryData extends JsonScheme {
     }
   }
 
+  /// Generated
   set anon_huge_pages(num? value) {
     rawData["anon_huge_pages"] = value;
   }
 
+  /// Generated
   num? get shmem_huge_pages {
     try {
       if (rawData["shmem_huge_pages"] is num == false) {
@@ -730,10 +823,12 @@ class MemoryData extends JsonScheme {
     }
   }
 
+  /// Generated
   set shmem_huge_pages(num? value) {
     rawData["shmem_huge_pages"] = value;
   }
 
+  /// Generated
   num? get shmem_pmd_mapped {
     try {
       if (rawData["shmem_pmd_mapped"] is num == false) {
@@ -745,10 +840,12 @@ class MemoryData extends JsonScheme {
     }
   }
 
+  /// Generated
   set shmem_pmd_mapped(num? value) {
     rawData["shmem_pmd_mapped"] = value;
   }
 
+  /// Generated
   num? get file_huge_pages {
     try {
       if (rawData["file_huge_pages"] is num == false) {
@@ -760,10 +857,12 @@ class MemoryData extends JsonScheme {
     }
   }
 
+  /// Generated
   set file_huge_pages(num? value) {
     rawData["file_huge_pages"] = value;
   }
 
+  /// Generated
   num? get file_pmd_mapped {
     try {
       if (rawData["file_pmd_mapped"] is num == false) {
@@ -775,10 +874,12 @@ class MemoryData extends JsonScheme {
     }
   }
 
+  /// Generated
   set file_pmd_mapped(num? value) {
     rawData["file_pmd_mapped"] = value;
   }
 
+  /// Generated
   num? get unaccepted {
     try {
       if (rawData["unaccepted"] is num == false) {
@@ -790,10 +891,12 @@ class MemoryData extends JsonScheme {
     }
   }
 
+  /// Generated
   set unaccepted(num? value) {
     rawData["unaccepted"] = value;
   }
 
+  /// Generated
   num? get huge_pages_total {
     try {
       if (rawData["huge_pages_total"] is num == false) {
@@ -805,10 +908,12 @@ class MemoryData extends JsonScheme {
     }
   }
 
+  /// Generated
   set huge_pages_total(num? value) {
     rawData["huge_pages_total"] = value;
   }
 
+  /// Generated
   num? get huge_pages_free {
     try {
       if (rawData["huge_pages_free"] is num == false) {
@@ -820,10 +925,12 @@ class MemoryData extends JsonScheme {
     }
   }
 
+  /// Generated
   set huge_pages_free(num? value) {
     rawData["huge_pages_free"] = value;
   }
 
+  /// Generated
   num? get huge_pages_rsvd {
     try {
       if (rawData["huge_pages_rsvd"] is num == false) {
@@ -835,10 +942,12 @@ class MemoryData extends JsonScheme {
     }
   }
 
+  /// Generated
   set huge_pages_rsvd(num? value) {
     rawData["huge_pages_rsvd"] = value;
   }
 
+  /// Generated
   num? get huge_pages_surp {
     try {
       if (rawData["huge_pages_surp"] is num == false) {
@@ -850,10 +959,12 @@ class MemoryData extends JsonScheme {
     }
   }
 
+  /// Generated
   set huge_pages_surp(num? value) {
     rawData["huge_pages_surp"] = value;
   }
 
+  /// Generated
   num? get hugepagesize {
     try {
       if (rawData["hugepagesize"] is num == false) {
@@ -865,10 +976,12 @@ class MemoryData extends JsonScheme {
     }
   }
 
+  /// Generated
   set hugepagesize(num? value) {
     rawData["hugepagesize"] = value;
   }
 
+  /// Generated
   num? get hugetlb {
     try {
       if (rawData["hugetlb"] is num == false) {
@@ -880,10 +993,12 @@ class MemoryData extends JsonScheme {
     }
   }
 
+  /// Generated
   set hugetlb(num? value) {
     rawData["hugetlb"] = value;
   }
 
+  /// Generated
   num? get direct_map4k {
     try {
       if (rawData["direct_map4k"] is num == false) {
@@ -895,10 +1010,12 @@ class MemoryData extends JsonScheme {
     }
   }
 
+  /// Generated
   set direct_map4k(num? value) {
     rawData["direct_map4k"] = value;
   }
 
+  /// Generated
   num? get direct_map2_m {
     try {
       if (rawData["direct_map2_m"] is num == false) {
@@ -910,10 +1027,12 @@ class MemoryData extends JsonScheme {
     }
   }
 
+  /// Generated
   set direct_map2_m(num? value) {
     rawData["direct_map2_m"] = value;
   }
 
+  /// Generated
   num? get direct_map1_g {
     try {
       if (rawData["direct_map1_g"] is num == false) {
@@ -925,10 +1044,12 @@ class MemoryData extends JsonScheme {
     }
   }
 
+  /// Generated
   set direct_map1_g(num? value) {
     rawData["direct_map1_g"] = value;
   }
 
+  /// Generated
   static MemoryData create({
     bool schemeUtilsIsSetDefaultData = false,
     String special_type = "memoryData",

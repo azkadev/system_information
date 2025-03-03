@@ -40,6 +40,7 @@ import 'dart:isolate';
 import 'package:general_lib/general_lib.dart';
 import 'package:io_universe/io_universe.dart';
 
+/// General Library Documentation Undocument By General Corporation & Global Corporation & General Developer
 String get gpuInfo {
   final data = (Process.runSync(
     "lspci",
@@ -70,6 +71,7 @@ String get gpuInfo {
   return gpus.join("\n");
 }
 
+/// General Library Documentation Undocument By General Corporation & Global Corporation & General Developer
 String get networkInfo {
   final data = (Process.runSync(
     "lspci",
@@ -93,6 +95,7 @@ String get networkInfo {
   return networks.join("\n");
 }
 
+/// General Library Documentation Undocument By General Corporation & Global Corporation & General Developer
 String get diskInfo {
   final data = (Process.runSync(
     "lspci",
@@ -119,6 +122,7 @@ String get diskInfo {
   return networks.join("\n");
 }
 
+/// General Library Documentation Undocument By General Corporation & Global Corporation & General Developer
 String get kernelInfo {
   if (Dart.isAndroid) {
     return (Process.runSync("uname", ["-svm"])).stdout.toString().trim();
@@ -126,6 +130,7 @@ String get kernelInfo {
   return (Process.runSync("uname", ["-srp"])).stdout.toString().trim();
 }
 
+/// General Library Documentation Undocument By General Corporation & Global Corporation & General Developer
 Future<String> archInfo() {
   return Isolate.run(() async {
     final processResult = await Process.run(
@@ -159,6 +164,7 @@ Future<String> archInfo() {
 //   return Process.runSync("uname", ["-p"]).stdout.toString().trim();
 // }
 
+/// General Library Documentation Undocument By General Corporation & Global Corporation & General Developer
 String? get upTimeInfo {
   if (Dart.isAndroid) {
     // try {
@@ -177,6 +183,7 @@ String? get upTimeInfo {
   // return Duration(seconds: secondsPassed.floor());
 }
 
+/// General Library Documentation Undocument By General Corporation & Global Corporation & General Developer
 String? get shellInfo {
   if (Dart.isAndroid) {
     return "terminal";
@@ -209,14 +216,16 @@ String? get shellInfo {
 //   return Platform.environment["USER"];
 // }
 
+/// General Library Documentation Undocument By General Corporation & Global Corporation & General Developer
 String get titleInfo {
   return "${(Process.runSync("id", [
-        "-un"
+        "-un",
       ])).stdout.toString().trim()}-${(Process.runSync("hostname", [
-        "-f"
+        "-f",
       ])).stdout.toString().trim()}";
 }
 
+/// General Library Documentation Undocument By General Corporation & Global Corporation & General Developer
 String get modelInfo {
   if (Dart.isAndroid) {
     return Process.runSync("getprop", [

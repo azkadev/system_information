@@ -35,6 +35,7 @@ Bukan maksud kami menipu itu karena harga yang sudah di kalkulasi + bantuan tiba
 
 import 'dart:async';
 
+/// General Library Documentation Undocument By General Corporation & Global Corporation & General Developer
 FutureOr<String> getDeviceDrmId() async {
   return "";
 }

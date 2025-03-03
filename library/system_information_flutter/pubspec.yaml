@@ -7,8 +7,6 @@ environment:
 dependencies:
   flutter:
     sdk: 'flutter'
-  plugin_platform_interface: '^2.0.2'
-  general_lib: '^0.0.66'
 dev_dependencies:
   flutter_test:
     sdk: 'flutter'
@@ -19,10 +17,8 @@ flutter:
       android:
         package: 'global_corporation.general_developer.azkadev.system_information_flutter'
         pluginClass: 'SystemInformationFlutterPlugin'
-      # ios:
-        # pluginClass: 'SystemInformationFlutterPlugin'
 dependency_overrides:
-  pointycastle: '3.8.0'
+  pointycastle: '4.0.0'
   mime: '^2.0.0'
 funding:
   - 'https://github.com/sponsors/azkadev'

@@ -34,8 +34,33 @@ Bukan maksud kami menipu itu karena harga yang sudah di kalkulasi + bantuan tiba
 <!-- END LICENSE --> */
 import 'dart:async';
 
-import 'package:system_information/flutter/plugin/plugin.dart';
+import 'package:flutter/services.dart';
+import 'package:general_lib/general_lib.dart';
 
+/// General Library Documentation Undocument By General Corporation & Global Corporation & General Developer
 FutureOr<String> getDeviceDrmId() async {
   return await MethodChannelSystemInformationFlutter.getDeviceDrmId();
+}
+
+/// An implementation of [SystemInformationFlutterPlatform] that uses method channels.
+class MethodChannelSystemInformationFlutter {
+  /// General Library Documentation Undocument By General Corporation & Global Corporation & General Developer
+  static final methodChannel =
+      const MethodChannel('system_information_flutter');
+
+  /// only work for android and ios
+  static FutureOr<String> getDeviceDrmId() async {
+    try {
+      if (Dart.isWeb) {
+        return "";
+      }
+      if (Dart.isAndroid || Dart.isIOS) {
+        return (await methodChannel.invokeMethod<String?>('getDeviceDrmId')) ??
+            "";
+      }
+    } catch (e) {
+      return "";
+    }
+    return "";
+  }
 }

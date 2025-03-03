@@ -38,6 +38,7 @@ import 'package:general_lib/general_lib.dart';
 import 'package:system_information/scheme/scheme.dart';
 import 'package:io_universe/io_universe.dart';
 
+/// General Library Documentation Undocument By General Corporation & Global Corporation & General Developer
 CpuData getCpuData({
   bool isThrowOnError = false,
 }) {

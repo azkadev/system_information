@@ -6,6 +6,7 @@ import 'dart:async';
 import 'package:flutter/services.dart';
 import 'package:system_information/system_information.dart';
 
+/// General Library Documentation Undocument By General Corporation & Global Corporation & General Developer
 const SystemInformation systemInformation = SystemInformation();
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -15,7 +16,9 @@ void main() async {
   runApp(const MyApp());
 }
 
+/// General Library Documentation Undocument By General Corporation & Global Corporation & General Developer
 class MyApp extends StatefulWidget {
+  /// General Library Documentation Undocument By General Corporation & Global Corporation & General Developer
   const MyApp({super.key});
 
   @override

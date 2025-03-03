@@ -35,4 +35,6 @@ Bukan maksud kami menipu itu karena harga yang sudah di kalkulasi + bantuan tiba
 export "device_drm_type_none.dart"
     if (dart.library.ui) "device_drm_type_ui.dart"
     if (dart.library.io) "device_drm_type_io.dart"
-    if (dart.library.html) "device_drm_type_web.dart";
+    if (dart.library.html) "device_drm_type_web.dart"
+    if (dart.library.js) "device_drm_type_web.dart"
+    if (dart.library.js_interop) "device_drm_type_web.dart";

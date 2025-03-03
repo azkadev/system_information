@@ -19,6 +19,7 @@ extension _Exkaksoaksoakoko on File {
   }
 }
 
+/// General Library Documentation Undocument By General Corporation & Global Corporation & General Developer
 String powerConsumtion() {
   final String realBatPath = () {
     if (Directory(_bat1Path).existsSync()) {

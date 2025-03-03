@@ -1,12 +1,9 @@
 include: package:lints/recommended.yaml
 analyzer:
   exclude:
-    - bin/
-    - lib/
-    - example/
     - test
     - dev
-    - templates
 linter:
   rules:
     - public_member_api_docs
+    - require_trailing_commas

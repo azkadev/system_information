@@ -1,3 +1,5 @@
+// ignore_for_file: empty_catches
+
 /* <!-- START LICENSE -->
 
 
@@ -38,6 +40,7 @@ import 'package:general_lib/general_lib.dart';
 import 'package:system_information/scheme/power_data.dart';
 import 'package:io_universe/io_universe.dart';
 
+/// General Library Documentation Undocument By General Corporation & Global Corporation & General Developer
 PowerData getPowerData({
   bool isThrowOnError = false,
 }) {

@@ -2,8 +2,16 @@
 import "package:general_lib/general_lib.dart";
 // import "dart:convert";
 
+/// Generated
 class CpuData extends JsonScheme {
+  /// Generated
   CpuData(super.rawData);
+
+  /// return default special type @type
+  /// "cpuData"
+  static String get defaultDataSpecialType {
+    return "cpuData";
+  }
 
   /// return default data
   ///
@@ -32,6 +40,7 @@ class CpuData extends JsonScheme {
     return CpuData({});
   }
 
+  /// Generated
   String? get special_type {
     try {
       if (rawData["@type"] is String == false) {
@@ -43,10 +52,12 @@ class CpuData extends JsonScheme {
     }
   }
 
+  /// Generated
   set special_type(String? value) {
     rawData["@type"] = value;
   }
 
+  /// Generated
   String? get name {
     try {
       if (rawData["name"] is String == false) {
@@ -58,10 +69,12 @@ class CpuData extends JsonScheme {
     }
   }
 
+  /// Generated
   set name(String? value) {
     rawData["name"] = value;
   }
 
+  /// Generated
   static CpuData create({
     bool schemeUtilsIsSetDefaultData = false,
     String special_type = "cpuData",

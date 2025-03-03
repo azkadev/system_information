@@ -10,4 +10,3 @@ class RunnerTests: XCTestCase {
   }
 
 }
-

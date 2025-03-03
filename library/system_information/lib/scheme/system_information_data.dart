@@ -2,8 +2,16 @@
 import "package:general_lib/general_lib.dart";
 // import "dart:convert";
 
+/// Generated
 class SystemInformationData extends JsonScheme {
+  /// Generated
   SystemInformationData(super.rawData);
+
+  /// return default special type @type
+  /// "systemInformationData"
+  static String get defaultDataSpecialType {
+    return "systemInformationData";
+  }
 
   /// return default data
   ///
@@ -47,7 +55,7 @@ class SystemInformationData extends JsonScheme {
       "total_bandwith": "280.52 MB",
       "ram_usage_by_this_program": "271 MB",
       "executable_type": "cli",
-      "uptime_program": "604 millisecond(s) ago"
+      "uptime_program": "604 millisecond(s) ago",
     };
   }
 
@@ -72,6 +80,7 @@ class SystemInformationData extends JsonScheme {
     return SystemInformationData({});
   }
 
+  /// Generated
   String? get special_type {
     try {
       if (rawData["@type"] is String == false) {
@@ -83,10 +92,12 @@ class SystemInformationData extends JsonScheme {
     }
   }
 
+  /// Generated
   set special_type(String? value) {
     rawData["@type"] = value;
   }
 
+  /// Generated
   String? get title {
     try {
       if (rawData["title"] is String == false) {
@@ -98,10 +109,12 @@ class SystemInformationData extends JsonScheme {
     }
   }
 
+  /// Generated
   set title(String? value) {
     rawData["title"] = value;
   }
 
+  /// Generated
   String? get os {
     try {
       if (rawData["os"] is String == false) {
@@ -113,10 +126,12 @@ class SystemInformationData extends JsonScheme {
     }
   }
 
+  /// Generated
   set os(String? value) {
     rawData["os"] = value;
   }
 
+  /// Generated
   String? get platform_type {
     try {
       if (rawData["platform_type"] is String == false) {
@@ -128,10 +143,12 @@ class SystemInformationData extends JsonScheme {
     }
   }
 
+  /// Generated
   set platform_type(String? value) {
     rawData["platform_type"] = value;
   }
 
+  /// Generated
   String? get arch {
     try {
       if (rawData["arch"] is String == false) {
@@ -143,10 +160,12 @@ class SystemInformationData extends JsonScheme {
     }
   }
 
+  /// Generated
   set arch(String? value) {
     rawData["arch"] = value;
   }
 
+  /// Generated
   String? get host {
     try {
       if (rawData["host"] is String == false) {
@@ -158,10 +177,12 @@ class SystemInformationData extends JsonScheme {
     }
   }
 
+  /// Generated
   set host(String? value) {
     rawData["host"] = value;
   }
 
+  /// Generated
   String? get kernel {
     try {
       if (rawData["kernel"] is String == false) {
@@ -173,10 +194,12 @@ class SystemInformationData extends JsonScheme {
     }
   }
 
+  /// Generated
   set kernel(String? value) {
     rawData["kernel"] = value;
   }
 
+  /// Generated
   String? get uptime {
     try {
       if (rawData["uptime"] is String == false) {
@@ -188,10 +211,12 @@ class SystemInformationData extends JsonScheme {
     }
   }
 
+  /// Generated
   set uptime(String? value) {
     rawData["uptime"] = value;
   }
 
+  /// Generated
   String? get shell {
     try {
       if (rawData["shell"] is String == false) {
@@ -203,10 +228,12 @@ class SystemInformationData extends JsonScheme {
     }
   }
 
+  /// Generated
   set shell(String? value) {
     rawData["shell"] = value;
   }
 
+  /// Generated
   Object? get resolution {
     try {
       if (rawData["resolution"] is Object == false) {
@@ -218,10 +245,12 @@ class SystemInformationData extends JsonScheme {
     }
   }
 
+  /// Generated
   set resolution(Object? value) {
     rawData["resolution"] = value;
   }
 
+  /// Generated
   Object? get de {
     try {
       if (rawData["de"] is Object == false) {
@@ -233,10 +262,12 @@ class SystemInformationData extends JsonScheme {
     }
   }
 
+  /// Generated
   set de(Object? value) {
     rawData["de"] = value;
   }
 
+  /// Generated
   String? get wm {
     try {
       if (rawData["wm"] is String == false) {
@@ -248,10 +279,12 @@ class SystemInformationData extends JsonScheme {
     }
   }
 
+  /// Generated
   set wm(String? value) {
     rawData["wm"] = value;
   }
 
+  /// Generated
   String? get wm_theme {
     try {
       if (rawData["wm_theme"] is String == false) {
@@ -263,10 +296,12 @@ class SystemInformationData extends JsonScheme {
     }
   }
 
+  /// Generated
   set wm_theme(String? value) {
     rawData["wm_theme"] = value;
   }
 
+  /// Generated
   String? get theme {
     try {
       if (rawData["theme"] is String == false) {
@@ -278,10 +313,12 @@ class SystemInformationData extends JsonScheme {
     }
   }
 
+  /// Generated
   set theme(String? value) {
     rawData["theme"] = value;
   }
 
+  /// Generated
   String? get icons {
     try {
       if (rawData["icons"] is String == false) {
@@ -293,10 +330,12 @@ class SystemInformationData extends JsonScheme {
     }
   }
 
+  /// Generated
   set icons(String? value) {
     rawData["icons"] = value;
   }
 
+  /// Generated
   String? get terminal {
     try {
       if (rawData["terminal"] is String == false) {
@@ -308,10 +347,12 @@ class SystemInformationData extends JsonScheme {
     }
   }
 
+  /// Generated
   set terminal(String? value) {
     rawData["terminal"] = value;
   }
 
+  /// Generated
   String? get cpu {
     try {
       if (rawData["cpu"] is String == false) {
@@ -323,10 +364,12 @@ class SystemInformationData extends JsonScheme {
     }
   }
 
+  /// Generated
   set cpu(String? value) {
     rawData["cpu"] = value;
   }
 
+  /// Generated
   String? get gpu {
     try {
       if (rawData["gpu"] is String == false) {
@@ -338,10 +381,12 @@ class SystemInformationData extends JsonScheme {
     }
   }
 
+  /// Generated
   set gpu(String? value) {
     rawData["gpu"] = value;
   }
 
+  /// Generated
   String? get network {
     try {
       if (rawData["network"] is String == false) {
@@ -353,10 +398,12 @@ class SystemInformationData extends JsonScheme {
     }
   }
 
+  /// Generated
   set network(String? value) {
     rawData["network"] = value;
   }
 
+  /// Generated
   String? get disk {
     try {
       if (rawData["disk"] is String == false) {
@@ -368,10 +415,12 @@ class SystemInformationData extends JsonScheme {
     }
   }
 
+  /// Generated
   set disk(String? value) {
     rawData["disk"] = value;
   }
 
+  /// Generated
   String? get power {
     try {
       if (rawData["power"] is String == false) {
@@ -383,10 +432,12 @@ class SystemInformationData extends JsonScheme {
     }
   }
 
+  /// Generated
   set power(String? value) {
     rawData["power"] = value;
   }
 
+  /// Generated
   String? get ram_total {
     try {
       if (rawData["ram_total"] is String == false) {
@@ -398,10 +449,12 @@ class SystemInformationData extends JsonScheme {
     }
   }
 
+  /// Generated
   set ram_total(String? value) {
     rawData["ram_total"] = value;
   }
 
+  /// Generated
   String? get ram_available {
     try {
       if (rawData["ram_available"] is String == false) {
@@ -413,10 +466,12 @@ class SystemInformationData extends JsonScheme {
     }
   }
 
+  /// Generated
   set ram_available(String? value) {
     rawData["ram_available"] = value;
   }
 
+  /// Generated
   String? get ram_usage {
     try {
       if (rawData["ram_usage"] is String == false) {
@@ -428,10 +483,12 @@ class SystemInformationData extends JsonScheme {
     }
   }
 
+  /// Generated
   set ram_usage(String? value) {
     rawData["ram_usage"] = value;
   }
 
+  /// Generated
   String? get ram_cached {
     try {
       if (rawData["ram_cached"] is String == false) {
@@ -443,10 +500,12 @@ class SystemInformationData extends JsonScheme {
     }
   }
 
+  /// Generated
   set ram_cached(String? value) {
     rawData["ram_cached"] = value;
   }
 
+  /// Generated
   String? get swap_total {
     try {
       if (rawData["swap_total"] is String == false) {
@@ -458,10 +517,12 @@ class SystemInformationData extends JsonScheme {
     }
   }
 
+  /// Generated
   set swap_total(String? value) {
     rawData["swap_total"] = value;
   }
 
+  /// Generated
   String? get swap_available {
     try {
       if (rawData["swap_available"] is String == false) {
@@ -473,10 +534,12 @@ class SystemInformationData extends JsonScheme {
     }
   }
 
+  /// Generated
   set swap_available(String? value) {
     rawData["swap_available"] = value;
   }
 
+  /// Generated
   String? get swap_cache {
     try {
       if (rawData["swap_cache"] is String == false) {
@@ -488,10 +551,12 @@ class SystemInformationData extends JsonScheme {
     }
   }
 
+  /// Generated
   set swap_cache(String? value) {
     rawData["swap_cache"] = value;
   }
 
+  /// Generated
   String? get ram_commited {
     try {
       if (rawData["ram_commited"] is String == false) {
@@ -503,10 +568,12 @@ class SystemInformationData extends JsonScheme {
     }
   }
 
+  /// Generated
   set ram_commited(String? value) {
     rawData["ram_commited"] = value;
   }
 
+  /// Generated
   String? get ram_swap_total {
     try {
       if (rawData["ram_swap_total"] is String == false) {
@@ -518,10 +585,12 @@ class SystemInformationData extends JsonScheme {
     }
   }
 
+  /// Generated
   set ram_swap_total(String? value) {
     rawData["ram_swap_total"] = value;
   }
 
+  /// Generated
   String? get version {
     try {
       if (rawData["version"] is String == false) {
@@ -533,10 +602,12 @@ class SystemInformationData extends JsonScheme {
     }
   }
 
+  /// Generated
   set version(String? value) {
     rawData["version"] = value;
   }
 
+  /// Generated
   String? get device_name {
     try {
       if (rawData["device_name"] is String == false) {
@@ -548,10 +619,12 @@ class SystemInformationData extends JsonScheme {
     }
   }
 
+  /// Generated
   set device_name(String? value) {
     rawData["device_name"] = value;
   }
 
+  /// Generated
   String? get total_bandwith_download {
     try {
       if (rawData["total_bandwith_download"] is String == false) {
@@ -563,10 +636,12 @@ class SystemInformationData extends JsonScheme {
     }
   }
 
+  /// Generated
   set total_bandwith_download(String? value) {
     rawData["total_bandwith_download"] = value;
   }
 
+  /// Generated
   String? get total_bandwith_upload {
     try {
       if (rawData["total_bandwith_upload"] is String == false) {
@@ -578,10 +653,12 @@ class SystemInformationData extends JsonScheme {
     }
   }
 
+  /// Generated
   set total_bandwith_upload(String? value) {
     rawData["total_bandwith_upload"] = value;
   }
 
+  /// Generated
   String? get total_bandwith {
     try {
       if (rawData["total_bandwith"] is String == false) {
@@ -593,10 +670,12 @@ class SystemInformationData extends JsonScheme {
     }
   }
 
+  /// Generated
   set total_bandwith(String? value) {
     rawData["total_bandwith"] = value;
   }
 
+  /// Generated
   String? get ram_usage_by_this_program {
     try {
       if (rawData["ram_usage_by_this_program"] is String == false) {
@@ -608,10 +687,12 @@ class SystemInformationData extends JsonScheme {
     }
   }
 
+  /// Generated
   set ram_usage_by_this_program(String? value) {
     rawData["ram_usage_by_this_program"] = value;
   }
 
+  /// Generated
   String? get executable_type {
     try {
       if (rawData["executable_type"] is String == false) {
@@ -623,10 +704,12 @@ class SystemInformationData extends JsonScheme {
     }
   }
 
+  /// Generated
   set executable_type(String? value) {
     rawData["executable_type"] = value;
   }
 
+  /// Generated
   String? get uptime_program {
     try {
       if (rawData["uptime_program"] is String == false) {
@@ -638,10 +721,12 @@ class SystemInformationData extends JsonScheme {
     }
   }
 
+  /// Generated
   set uptime_program(String? value) {
     rawData["uptime_program"] = value;
   }
 
+  /// Generated
   static SystemInformationData create({
     bool schemeUtilsIsSetDefaultData = false,
     String special_type = "systemInformationData",

@@ -37,6 +37,7 @@ Bukan maksud kami menipu itu karena harga yang sudah di kalkulasi + bantuan tiba
 import 'package:general_lib/general_lib.dart';
 import 'package:io_universe/io_universe.dart';
 
+/// General Library Documentation Undocument By General Corporation & Global Corporation & General Developer
 (int bandwith_download, int bandwith_upload) getNetworkBandwithUsageByPid({
   int? pidProcces,
   bool isThrowOnError = false,
@@ -83,6 +84,7 @@ import 'package:io_universe/io_universe.dart';
   return (0, 0);
 }
 
+/// General Library Documentation Undocument By General Corporation & Global Corporation & General Developer
 (int bandwith_download, int bandwith_upload) getNetworkBandwithUsage({
   bool isThrowOnError = false,
 }) {

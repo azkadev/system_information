@@ -2,7 +2,9 @@
 import "package:general_lib/general_lib.dart";
 // import "dart:convert";
 
+/// General Library Documentation Undocument By General Corporation & Global Corporation & General Developer
 class SystemInfoFetchData extends JsonScheme {
+  /// General Library Documentation Undocument By General Corporation & Global Corporation & General Developer
   SystemInfoFetchData(super.rawData);
 
   /// return default data
@@ -47,7 +49,7 @@ class SystemInfoFetchData extends JsonScheme {
       "total_bandwith": "280.52 MB",
       "ram_usage_by_this_program": "271 MB",
       "executable_type": "cli",
-      "uptime_program": "604 millisecond(s) ago"
+      "uptime_program": "604 millisecond(s) ago",
     };
   }
 
@@ -72,6 +74,7 @@ class SystemInfoFetchData extends JsonScheme {
     return SystemInfoFetchData({});
   }
 
+  /// General Library Documentation Undocument By General Corporation & Global Corporation & General Developer
   String? get special_type {
     try {
       if (rawData["@type"] is String == false) {
@@ -87,6 +90,7 @@ class SystemInfoFetchData extends JsonScheme {
     rawData["@type"] = value;
   }
 
+  /// General Library Documentation Undocument By General Corporation & Global Corporation & General Developer
   String? get title {
     try {
       if (rawData["title"] is String == false) {
@@ -102,6 +106,7 @@ class SystemInfoFetchData extends JsonScheme {
     rawData["title"] = value;
   }
 
+  /// General Library Documentation Undocument By General Corporation & Global Corporation & General Developer
   String? get os {
     try {
       if (rawData["os"] is String == false) {
@@ -117,6 +122,7 @@ class SystemInfoFetchData extends JsonScheme {
     rawData["os"] = value;
   }
 
+  /// General Library Documentation Undocument By General Corporation & Global Corporation & General Developer
   String? get platform_type {
     try {
       if (rawData["platform_type"] is String == false) {
@@ -132,6 +138,7 @@ class SystemInfoFetchData extends JsonScheme {
     rawData["platform_type"] = value;
   }
 
+  /// General Library Documentation Undocument By General Corporation & Global Corporation & General Developer
   String? get arch {
     try {
       if (rawData["arch"] is String == false) {
@@ -147,6 +154,7 @@ class SystemInfoFetchData extends JsonScheme {
     rawData["arch"] = value;
   }
 
+  /// General Library Documentation Undocument By General Corporation & Global Corporation & General Developer
   String? get host {
     try {
       if (rawData["host"] is String == false) {
@@ -162,6 +170,7 @@ class SystemInfoFetchData extends JsonScheme {
     rawData["host"] = value;
   }
 
+  /// General Library Documentation Undocument By General Corporation & Global Corporation & General Developer
   String? get kernel {
     try {
       if (rawData["kernel"] is String == false) {
@@ -177,6 +186,7 @@ class SystemInfoFetchData extends JsonScheme {
     rawData["kernel"] = value;
   }
 
+  /// General Library Documentation Undocument By General Corporation & Global Corporation & General Developer
   String? get uptime {
     try {
       if (rawData["uptime"] is String == false) {
@@ -192,6 +202,7 @@ class SystemInfoFetchData extends JsonScheme {
     rawData["uptime"] = value;
   }
 
+  /// General Library Documentation Undocument By General Corporation & Global Corporation & General Developer
   String? get shell {
     try {
       if (rawData["shell"] is String == false) {
@@ -207,6 +218,7 @@ class SystemInfoFetchData extends JsonScheme {
     rawData["shell"] = value;
   }
 
+  /// General Library Documentation Undocument By General Corporation & Global Corporation & General Developer
   Object? get resolution {
     try {
       if (rawData["resolution"] is Object == false) {
@@ -222,6 +234,7 @@ class SystemInfoFetchData extends JsonScheme {
     rawData["resolution"] = value;
   }
 
+  /// General Library Documentation Undocument By General Corporation & Global Corporation & General Developer
   Object? get de {
     try {
       if (rawData["de"] is Object == false) {
@@ -237,6 +250,7 @@ class SystemInfoFetchData extends JsonScheme {
     rawData["de"] = value;
   }
 
+  /// General Library Documentation Undocument By General Corporation & Global Corporation & General Developer
   String? get wm {
     try {
       if (rawData["wm"] is String == false) {
@@ -252,6 +266,7 @@ class SystemInfoFetchData extends JsonScheme {
     rawData["wm"] = value;
   }
 
+  /// General Library Documentation Undocument By General Corporation & Global Corporation & General Developer
   String? get wm_theme {
     try {
       if (rawData["wm_theme"] is String == false) {
@@ -267,6 +282,7 @@ class SystemInfoFetchData extends JsonScheme {
     rawData["wm_theme"] = value;
   }
 
+  /// General Library Documentation Undocument By General Corporation & Global Corporation & General Developer
   String? get theme {
     try {
       if (rawData["theme"] is String == false) {
@@ -282,6 +298,7 @@ class SystemInfoFetchData extends JsonScheme {
     rawData["theme"] = value;
   }
 
+  /// General Library Documentation Undocument By General Corporation & Global Corporation & General Developer
   String? get icons {
     try {
       if (rawData["icons"] is String == false) {
@@ -297,6 +314,7 @@ class SystemInfoFetchData extends JsonScheme {
     rawData["icons"] = value;
   }
 
+  /// General Library Documentation Undocument By General Corporation & Global Corporation & General Developer
   String? get terminal {
     try {
       if (rawData["terminal"] is String == false) {
@@ -312,6 +330,7 @@ class SystemInfoFetchData extends JsonScheme {
     rawData["terminal"] = value;
   }
 
+  /// General Library Documentation Undocument By General Corporation & Global Corporation & General Developer
   String? get cpu {
     try {
       if (rawData["cpu"] is String == false) {
@@ -327,6 +346,7 @@ class SystemInfoFetchData extends JsonScheme {
     rawData["cpu"] = value;
   }
 
+  /// General Library Documentation Undocument By General Corporation & Global Corporation & General Developer
   String? get gpu {
     try {
       if (rawData["gpu"] is String == false) {
@@ -342,6 +362,7 @@ class SystemInfoFetchData extends JsonScheme {
     rawData["gpu"] = value;
   }
 
+  /// General Library Documentation Undocument By General Corporation & Global Corporation & General Developer
   String? get network {
     try {
       if (rawData["network"] is String == false) {
@@ -357,6 +378,7 @@ class SystemInfoFetchData extends JsonScheme {
     rawData["network"] = value;
   }
 
+  /// General Library Documentation Undocument By General Corporation & Global Corporation & General Developer
   String? get disk {
     try {
       if (rawData["disk"] is String == false) {
@@ -372,6 +394,7 @@ class SystemInfoFetchData extends JsonScheme {
     rawData["disk"] = value;
   }
 
+  /// General Library Documentation Undocument By General Corporation & Global Corporation & General Developer
   String? get power {
     try {
       if (rawData["power"] is String == false) {
@@ -387,6 +410,7 @@ class SystemInfoFetchData extends JsonScheme {
     rawData["power"] = value;
   }
 
+  /// General Library Documentation Undocument By General Corporation & Global Corporation & General Developer
   String? get ram_total {
     try {
       if (rawData["ram_total"] is String == false) {
@@ -402,6 +426,7 @@ class SystemInfoFetchData extends JsonScheme {
     rawData["ram_total"] = value;
   }
 
+  /// General Library Documentation Undocument By General Corporation & Global Corporation & General Developer
   String? get ram_available {
     try {
       if (rawData["ram_available"] is String == false) {
@@ -417,6 +442,7 @@ class SystemInfoFetchData extends JsonScheme {
     rawData["ram_available"] = value;
   }
 
+  /// General Library Documentation Undocument By General Corporation & Global Corporation & General Developer
   String? get ram_usage {
     try {
       if (rawData["ram_usage"] is String == false) {
@@ -432,6 +458,7 @@ class SystemInfoFetchData extends JsonScheme {
     rawData["ram_usage"] = value;
   }
 
+  /// General Library Documentation Undocument By General Corporation & Global Corporation & General Developer
   String? get ram_cached {
     try {
       if (rawData["ram_cached"] is String == false) {
@@ -447,6 +474,7 @@ class SystemInfoFetchData extends JsonScheme {
     rawData["ram_cached"] = value;
   }
 
+  /// General Library Documentation Undocument By General Corporation & Global Corporation & General Developer
   String? get swap_total {
     try {
       if (rawData["swap_total"] is String == false) {
@@ -462,6 +490,7 @@ class SystemInfoFetchData extends JsonScheme {
     rawData["swap_total"] = value;
   }
 
+  /// General Library Documentation Undocument By General Corporation & Global Corporation & General Developer
   String? get swap_available {
     try {
       if (rawData["swap_available"] is String == false) {
@@ -477,6 +506,7 @@ class SystemInfoFetchData extends JsonScheme {
     rawData["swap_available"] = value;
   }
 
+  /// General Library Documentation Undocument By General Corporation & Global Corporation & General Developer
   String? get swap_cache {
     try {
       if (rawData["swap_cache"] is String == false) {
@@ -492,6 +522,7 @@ class SystemInfoFetchData extends JsonScheme {
     rawData["swap_cache"] = value;
   }
 
+  /// General Library Documentation Undocument By General Corporation & Global Corporation & General Developer
   String? get ram_commited {
     try {
       if (rawData["ram_commited"] is String == false) {
@@ -507,6 +538,7 @@ class SystemInfoFetchData extends JsonScheme {
     rawData["ram_commited"] = value;
   }
 
+  /// General Library Documentation Undocument By General Corporation & Global Corporation & General Developer
   String? get ram_swap_total {
     try {
       if (rawData["ram_swap_total"] is String == false) {
@@ -522,6 +554,7 @@ class SystemInfoFetchData extends JsonScheme {
     rawData["ram_swap_total"] = value;
   }
 
+  /// General Library Documentation Undocument By General Corporation & Global Corporation & General Developer
   String? get version {
     try {
       if (rawData["version"] is String == false) {
@@ -537,6 +570,7 @@ class SystemInfoFetchData extends JsonScheme {
     rawData["version"] = value;
   }
 
+  /// General Library Documentation Undocument By General Corporation & Global Corporation & General Developer
   String? get device_name {
     try {
       if (rawData["device_name"] is String == false) {
@@ -552,6 +586,7 @@ class SystemInfoFetchData extends JsonScheme {
     rawData["device_name"] = value;
   }
 
+  /// General Library Documentation Undocument By General Corporation & Global Corporation & General Developer
   String? get total_bandwith_download {
     try {
       if (rawData["total_bandwith_download"] is String == false) {
@@ -567,6 +602,7 @@ class SystemInfoFetchData extends JsonScheme {
     rawData["total_bandwith_download"] = value;
   }
 
+  /// General Library Documentation Undocument By General Corporation & Global Corporation & General Developer
   String? get total_bandwith_upload {
     try {
       if (rawData["total_bandwith_upload"] is String == false) {
@@ -582,6 +618,7 @@ class SystemInfoFetchData extends JsonScheme {
     rawData["total_bandwith_upload"] = value;
   }
 
+  /// General Library Documentation Undocument By General Corporation & Global Corporation & General Developer
   String? get total_bandwith {
     try {
       if (rawData["total_bandwith"] is String == false) {
@@ -597,6 +634,7 @@ class SystemInfoFetchData extends JsonScheme {
     rawData["total_bandwith"] = value;
   }
 
+  /// General Library Documentation Undocument By General Corporation & Global Corporation & General Developer
   String? get ram_usage_by_this_program {
     try {
       if (rawData["ram_usage_by_this_program"] is String == false) {
@@ -612,6 +650,7 @@ class SystemInfoFetchData extends JsonScheme {
     rawData["ram_usage_by_this_program"] = value;
   }
 
+  /// General Library Documentation Undocument By General Corporation & Global Corporation & General Developer
   String? get executable_type {
     try {
       if (rawData["executable_type"] is String == false) {
@@ -627,6 +666,7 @@ class SystemInfoFetchData extends JsonScheme {
     rawData["executable_type"] = value;
   }
 
+  /// General Library Documentation Undocument By General Corporation & Global Corporation & General Developer
   String? get uptime_program {
     try {
       if (rawData["uptime_program"] is String == false) {
@@ -642,6 +682,7 @@ class SystemInfoFetchData extends JsonScheme {
     rawData["uptime_program"] = value;
   }
 
+  /// General Library Documentation Undocument By General Corporation & Global Corporation & General Developer
   static SystemInfoFetchData create({
     bool schemeUtilsIsSetDefaultData = false,
     String special_type = "systemInfoFetchData",
