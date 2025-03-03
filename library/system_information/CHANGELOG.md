@@ -1,3 +1,11 @@
+## 0.0.12
+
+- New Version 0.0.12
+- Update Dependencies
+## 0.0.11
+
+- New Version 0.0.11
+- Update Dependencies
 ## 0.0.10
 
 - New Version 0.0.10
