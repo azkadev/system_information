@@ -29,7 +29,7 @@ android {
         namespace = "global_corporation.general_developer.azkadev.system_information_flutter"
     }
 
-    compileSdk = 34
+    compileSdk = 35
 
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_17
@@ -46,7 +46,7 @@ android {
     }
 
     defaultConfig {
-        minSdk = 21
+        minSdk = 23
     }
 
     dependencies {
