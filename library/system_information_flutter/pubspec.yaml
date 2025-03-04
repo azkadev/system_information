@@ -1,6 +1,6 @@
 name: 'system_information_flutter'
 description: 'A System Information library for help you get information device'
-version: '0.0.12'
+version: '0.0.13'
 environment:
   sdk: '>=3.6.0 <4.0.0'
   flutter: '>=3.3.0'
