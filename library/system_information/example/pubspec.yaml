@@ -9,7 +9,7 @@ dependencies:
     sdk: 'flutter'
   cupertino_icons: '^1.0.6'
   path: '^1.9.0'
-  general_lib: '^0.0.69'
+  general_lib: '^0.0.70'
   system_information: '^0.0.13'
 dev_dependencies:
   flutter_test:
