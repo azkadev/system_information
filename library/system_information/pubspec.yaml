@@ -19,7 +19,7 @@ dependencies:
   flutter:
     sdk: 'flutter'
   io_universe: '^0.0.8'
-  general_lib: '^0.0.70'
+  general_lib: '^0.0.71'
   path: '^1.9.0'
   system_information_flutter: '^0.0.13'
 dependency_overrides:
